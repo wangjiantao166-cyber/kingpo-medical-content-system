@@ -259,6 +259,12 @@ Security Agent
 
 Additional system-maintenance agents in this repository:
 
+- Multi-Agent Workflow Coordinator
+- SEO Site Architecture Planner
+- Navigation and Mega Menu Architect
+- Content Cluster Planner
+- Homepage Authority Hub
+- Orphan Link Auditor
 - Product Knowledge Base Agent
 - Product Lifecycle Manager
 - Application Page System Agent
