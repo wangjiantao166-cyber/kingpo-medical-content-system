@@ -35,7 +35,10 @@ Good signals:
 - Selection/configuration questions match real buyer needs.
 - Inquiry forms ask for standard, sample, test item, and parameter information.
 
-Avoid abstract marketing claims with no testing context.
+Avoid:
+
+- Abstract marketing claims with no testing context.
+- Generic text that could fit any test equipment.
 
 ### Expertise
 
@@ -48,7 +51,11 @@ Good signals:
 - Parameters are only included when sourced.
 - Unknown parameters are marked as needing confirmation or omitted.
 
-Avoid invented technical parameters, unsupported standard versions, unsupported clause numbers, and unsupported phrases such as `fully complies with`, `guaranteed to pass`, or `certified for`.
+Avoid:
+
+- Invented technical parameters.
+- Unsupported standard versions or clause numbers.
+- Unsupported phrases such as `fully complies with`, `guaranteed to pass`, or `certified for`.
 
 ### Authoritativeness
 
@@ -60,7 +67,10 @@ Good signals:
 - Competitor information is used only for market learning, not as KingPo fact.
 - Product pages link to related standards, applications, technical articles, and approved PDFs.
 
-Avoid copying competitor pages, tables, images, FAQs, or model structures.
+Avoid:
+
+- Copying competitor pages, tables, images, FAQs, or model structures.
+- Treating competitor products as KingPo products.
 
 ### Trustworthiness
 
@@ -74,7 +84,12 @@ Good signals:
 - Contact, inquiry, privacy, and company information are accessible.
 - High-risk claims are avoided unless verified.
 
-Avoid fake customer cases, fake certifications, fake inventory, price, lead time, registration claims, medical claims, or clinical outcome claims.
+Avoid:
+
+- Fake customer cases.
+- Fake certifications.
+- Fake inventory, price, lead time, or registration claims.
+- Medical or clinical outcome claims.
 
 ## Customer-First B2B Product Page Rules
 

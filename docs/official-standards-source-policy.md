@@ -28,11 +28,29 @@ Use official catalog pages, public summaries, scope descriptions, standard title
 
 ## What Official Sources Can Support
 
-Official standards sources may support standard number, standard title, publishing organization, standard family, general scope, publicly described application area, whether a standard appears relevant for a test object or product direction, and whether a page should treat it as main, supporting, background, or needs verification.
+Official standards sources may support:
+
+- Standard number
+- Standard title
+- Publishing organization
+- Standard family
+- General scope
+- Publicly described application area
+- Whether a standard appears relevant for a test object or product direction
+- Whether a page should treat it as main, supporting, background, or needs verification
 
 ## What Official Sources Cannot Automatically Support
 
-Official standards sources do not automatically prove KingPo product compliance, certification or approval, test pass result, suitability for registration testing, full clause coverage, exact test setup for a specific customer sample, product technical parameters, or legal right to reproduce paid standard text.
+Official standards sources do not automatically prove:
+
+- KingPo product compliance
+- Certification or approval
+- Test pass result
+- Suitability for registration testing
+- Full clause coverage
+- Exact test setup for a specific customer sample
+- Product technical parameters
+- Legal right to reproduce paid standard text
 
 ## Paid Standards and Copyright Rule
 

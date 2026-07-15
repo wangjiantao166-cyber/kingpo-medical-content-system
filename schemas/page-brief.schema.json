@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingpo.example/schemas/page-brief.schema.json",
+  "title": "Page Brief",
+  "type": "object",
+  "required": ["brief_id", "page_type", "primary_entity_id", "buyer_intent", "source_ids", "approval_state"],
+  "properties": {
+    "brief_id": { "type": "string", "pattern": "^BRF-[A-Z0-9-]+$" },
+    "page_type": { "enum": ["product_category", "product_family", "product_model", "application", "standard_overview", "standard_mapping", "test_method_guide", "technical_resource", "case", "download_resource", "company_capability", "inquiry"] },
+    "primary_entity_id": { "type": "string" },
+    "buyer_intent": { "type": "string" },
+    "required_sections": { "type": "array", "items": { "type": "string" } },
+    "approved_claim_ids": { "type": "array", "items": { "type": "string" } },
+    "blocked_claim_ids": { "type": "array", "items": { "type": "string" } },
+    "internal_link_targets": { "type": "array", "items": { "type": "string" } },
+    "source_ids": { "type": "array", "items": { "type": "string" } },
+    "approval_state": { "enum": ["draft", "ready_for_authoring", "blocked", "approved"] }
+  },
+  "additionalProperties": false
+}

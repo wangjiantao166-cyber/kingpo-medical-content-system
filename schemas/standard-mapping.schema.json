@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingpo.example/schemas/standard-mapping.schema.json",
+  "title": "Standard Mapping",
+  "type": "object",
+  "required": ["mapping_id", "product_id", "standard_id", "relationship_type", "evidence_level", "source_ids", "review_status"],
+  "properties": {
+    "mapping_id": { "type": "string", "pattern": "^MAP-[A-Z0-9-]+$" },
+    "product_id": { "type": "string" },
+    "standard_id": { "type": "string" },
+    "edition": { "type": "string" },
+    "clause": { "type": "string" },
+    "test_item": { "type": "string" },
+    "relationship_type": { "enum": ["designed_for", "can_be_configured_for", "test_method_reference", "background_reference", "not_applicable"] },
+    "coverage_scope": { "type": "string" },
+    "required_configuration": { "type": "string" },
+    "evidence_level": { "enum": ["none", "source_suggested", "engineering_confirmed", "test_document_confirmed"] },
+    "source_ids": { "type": "array", "items": { "type": "string" } },
+    "allowed_public_wording": { "type": "string" },
+    "reviewer": { "type": "string" },
+    "review_status": { "enum": ["unreviewed", "approved", "needs_confirmation", "blocked"] }
+  },
+  "additionalProperties": false
+}

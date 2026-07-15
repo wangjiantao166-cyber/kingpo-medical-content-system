@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingpo.example/schemas/specification-record.schema.json",
+  "title": "Specification Record",
+  "type": "object",
+  "required": ["specification_id", "product_id", "spec_name", "value_type", "source_id", "verification_status", "public_visibility"],
+  "properties": {
+    "specification_id": { "type": "string", "pattern": "^SPEC-[A-Z0-9-]+$" },
+    "product_id": { "type": "string" },
+    "spec_group": { "type": "string" },
+    "spec_name": { "type": "string" },
+    "value_type": { "enum": ["text", "number", "range", "boolean", "list"] },
+    "nominal_value": {},
+    "minimum_value": { "type": "number" },
+    "maximum_value": { "type": "number" },
+    "unit": { "type": "string" },
+    "tolerance": { "type": "string" },
+    "resolution": { "type": "string" },
+    "accuracy": { "type": "string" },
+    "test_condition": { "type": "string" },
+    "applicable_models": { "type": "array", "items": { "type": "string" } },
+    "source_id": { "type": "string" },
+    "verification_status": { "enum": ["unreviewed", "verified", "needs_confirmation", "conflict_detected"] },
+    "public_visibility": { "enum": ["public_allowed", "draft_only", "internal_only"] },
+    "display_order": { "type": "integer" }
+  },
+  "additionalProperties": false
+}
