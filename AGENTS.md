@@ -4,7 +4,7 @@
 
 This repository is the KingPo test equipment WordPress content system blueprint.
 
-It supports a B2B product knowledge website for structured product records, WordPress CPT/ACF fields, product lifecycle status, applications, standards, internal linking, Google SEO, E-E-A-T, AI-assisted product page drafting, asset governance, inquiry conversion, and publishing QA.
+It supports a B2B product knowledge website for structured product records, WordPress CPT/ACF fields, product lifecycle status, SEO site architecture, navigation, applications, standards, internal linking, Google SEO, E-E-A-T, AI-assisted product page drafting, asset governance, inquiry conversion, and publishing QA.
 
 ## Existing Company Source Context
 
@@ -14,29 +14,53 @@ KingPo should not be described as only a medical device testing company. Existin
 - https://www.batterytestingmachine.com/ as a KingPo English product site covering battery testing equipment, environmental test chambers, safety compliance testing equipment, and related medical test equipment categories
 - https://www.kingpocn.com/ as a KingPo domestic Chinese site and Chinese-market source. It may support Chinese product facts, category understanding, images, and company capability references, but English/export content should be rewritten for overseas B2B buyers instead of directly machine-translated.
 
-The new medical-focused content system should use these sites as primary KingPo-owned source references where relevant, while still recording exact page-level sources and human verification status.
+The system should use these sites as primary KingPo-owned source references where relevant, while still recording exact page-level sources and human verification status.
 
 ## Core Content Rule
 
 Write for real customers first. SEO must help users and search engines understand the page; it must not create keyword-stuffed, thin, duplicated, or unsupported content.
 
-## Required Content Standards
+## Multi-Agent Coordination Rule
 
-All product, category, application, standard, and article content must follow:
+Complex work must start with `multi-agent-workflow-coordinator`. No single agent should publish, approve, or finalize important pages alone.
 
-- Source ownership classification
-- Product lifecycle status
-- Google SEO and E-E-A-T rules
-- Search Content Trust Signals (S-CTs)
-- Customer-first B2B buyer perspective
-- Cautious standard and compliance wording
-- No unsupported medical, regulatory, certification, customer case, stock, price, delivery, or clinical claims
-- No copying competitor content, images, tables, product facts, customer cases, or model systems
+General sequence for site architecture:
 
-## Required Skills for Content Work
+1. `multi-agent-workflow-coordinator`
+2. `seo-site-architecture-planner`
+3. `product-knowledge-base`
+4. `content-cluster-planner`
+5. `navigation-mega-menu-architect`
+6. `homepage-authority-hub`
+7. `standard-relation-auditor`
+8. `google-seo-eeat-content`
+9. `internal-linking-architect`
+10. `orphan-link-auditor`
+11. `product-publish-qa`
+
+General sequence for product publishing:
+
+1. `product-knowledge-base`
+2. `product-lifecycle-manager`
+3. `standard-relation-auditor`
+4. `asset-library-manager`
+5. `ai-product-page-generator`
+6. `google-seo-eeat-content`
+7. `content-cluster-planner`
+8. `internal-linking-architect`
+9. `wordpress-draft-publisher`
+10. `product-publish-qa`
+
+## Required Skills for Content and Site Work
 
 Use these agent skills when relevant:
 
+- multi-agent-workflow-coordinator
+- seo-site-architecture-planner
+- navigation-mega-menu-architect
+- content-cluster-planner
+- homepage-authority-hub
+- orphan-link-auditor
 - product-knowledge-base
 - product-lifecycle-manager
 - google-seo-eeat-content
@@ -51,6 +75,19 @@ Use these agent skills when relevant:
 - content-refresh-auditor
 - inquiry-conversion
 - data-import-export
+
+## Required Content Standards
+
+All product, category, application, standard, and article content must follow:
+
+- Source ownership classification
+- Product lifecycle status
+- Google SEO and E-E-A-T rules
+- Search Content Trust Signals (S-CTs)
+- Customer-first B2B buyer perspective
+- Cautious standard and compliance wording
+- No unsupported medical, regulatory, certification, customer case, stock, price, delivery, or clinical claims
+- No copying competitor content, images, tables, product facts, customer cases, or model systems
 
 ## AI Product Page Rule
 
