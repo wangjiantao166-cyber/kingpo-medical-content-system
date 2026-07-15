@@ -20,6 +20,15 @@ It is based on the earlier Chinese website rebuild planning repository, but exte
 
 The target is a KingPo-specific B2B product knowledge website with strong catalog depth and internal linking, inspired by mature equipment-industry information architecture patterns, while keeping all KingPo content original, source-based, and medically cautious.
 
+## Existing Company Source Context
+
+KingPo should not be described as only a medical device testing company. Existing source material mainly comes from:
+
+- https://www.dgkingpo.com/ as the KingPo / DGKingPo main site and broad test equipment source
+- https://www.batterytestingmachine.com/ as a KingPo English product site covering battery testing equipment, environmental test chambers, safety compliance testing equipment, and related medical test equipment categories
+
+The new medical-focused content system should use these sites as primary KingPo-owned source references where relevant, while still recording exact page-level sources and human verification status.
+
 ## Project
 
 This repository is for building the KingPo Chinese B2B medical test equipment website focused on BCI and active implantable medical device test equipment.
