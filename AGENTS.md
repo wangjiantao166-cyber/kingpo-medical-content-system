@@ -26,6 +26,7 @@ KingPo should not be described as only a medical device testing company. Existin
 
 - https://www.dgkingpo.com/ as the KingPo / DGKingPo main site and broad test equipment source
 - https://www.batterytestingmachine.com/ as a KingPo English product site covering battery testing equipment, environmental test chambers, safety compliance testing equipment, and related medical test equipment categories
+- https://www.kingpocn.com/ as a KingPo domestic Chinese site and Chinese-market source. It may support Chinese product facts, category understanding, images, and company capability references, but English/export content should be rewritten for overseas B2B buyers instead of directly machine-translated.
 
 The new medical-focused content system should use these sites as primary KingPo-owned source references where relevant, while still recording exact page-level sources and human verification status.
 
