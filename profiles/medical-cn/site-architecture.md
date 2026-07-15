@@ -1,3 +1,10 @@
+﻿---
+status: profile
+scope: medical-cn
+do_not_route: true
+superseded_by: docs/00-system-scope-and-sites.md
+---
+
 # 医疗专站信息架构规划
 
 ## 项目定位
@@ -185,3 +192,4 @@
 ## 内容质量要求
 
 内容必须准确、可追溯、医疗语境谨慎、采购和研发友好。禁止薄内容、关键词堆砌、夸大性能、虚构案例、虚构认证、虚构注册结论或虚构临床结论。
+

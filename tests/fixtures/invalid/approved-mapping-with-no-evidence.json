@@ -1,0 +1,10 @@
+{
+  "$schema_file": "standard-mapping.schema.json",
+  "mapping_id": "MAP-BAD-001",
+  "product_id": "PRD-DEMO-001",
+  "standard_id": "STD-DEMO-001",
+  "relationship_type": "can_be_configured_for",
+  "evidence_level": "none",
+  "source_ids": [],
+  "review_status": "approved"
+}

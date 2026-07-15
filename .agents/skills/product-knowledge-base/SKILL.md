@@ -1,6 +1,8 @@
----
+﻿---
 name: product-knowledge-base
-description: Convert KingPo product sources into structured, source-recorded product records for WordPress product catalog maintenance.
+status: deprecated
+replacement: product-data-governance
+do_not_use_for_new_work: true
 ---
 
 # Product Knowledge Base
@@ -47,3 +49,6 @@ Produce Chinese product name, English product name, model number, product family
 - Do not convert competitor products into KingPo products.
 - Do not mark R&D reference directions as existing products.
 - Do not publish or push to WordPress directly.
+
+
+

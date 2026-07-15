@@ -18,5 +18,21 @@
     "review_status": { "enum": ["unreviewed", "approved", "blocked", "needs_permission"] },
     "ai_generated": { "type": "boolean" }
   },
+  "allOf": [
+    {
+      "if": { "properties": { "asset_type": { "const": "competitor_reference" } } },
+      "then": { "properties": { "public_use_status": { "enum": ["internal_only", "blocked"] } } }
+    },
+    {
+      "if": { "properties": { "asset_type": { "const": "AI_concept_image" } } },
+      "then": {
+        "required": ["ai_generated"],
+        "properties": {
+          "ai_generated": { "const": true },
+          "public_use_status": { "enum": ["approved", "restricted", "internal_only", "blocked"] }
+        }
+      }
+    }
+  ],
   "additionalProperties": false
 }

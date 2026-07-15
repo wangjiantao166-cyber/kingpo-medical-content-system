@@ -1,6 +1,8 @@
----
+﻿---
 name: asset-library-manager
-description: Manage images, PDFs, diagrams, catalogs, manuals, and downloads with ownership, public-use permission, alt text, and version control.
+status: deprecated
+replacement: asset-visual-production
+do_not_use_for_new_work: true
 ---
 
 # Asset Library Manager
@@ -50,3 +52,6 @@ Use one of:
 - Do not use internal/customer images without permission.
 - Do not expose confidential PDFs.
 - Do not treat an unapproved generated image as final product evidence.
+
+
+

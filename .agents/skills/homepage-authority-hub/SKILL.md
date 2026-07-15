@@ -1,6 +1,8 @@
----
+﻿---
 name: homepage-authority-hub
-description: Plan the homepage as an authority hub that routes users and link equity to priority product, application, standard, and technical resource clusters.
+status: deprecated
+replacement: information-architecture-navigation
+do_not_use_for_new_work: true
 ---
 
 # Homepage Authority Hub
@@ -51,3 +53,6 @@ Work with `seo-site-architecture-planner`, `navigation-mega-menu-architect`, `co
 - Do not overload homepage with excessive links.
 - Do not keyword-stuff headings.
 - Do not use unsupported claims or fake authority signals.
+
+
+

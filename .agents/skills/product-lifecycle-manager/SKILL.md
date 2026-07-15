@@ -1,6 +1,8 @@
----
+﻿---
 name: product-lifecycle-manager
-description: Assign and enforce product lifecycle status so existing products, custom directions, R&D references, internal items, and legacy products are handled safely.
+status: deprecated
+replacement: product-data-governance
+do_not_use_for_new_work: true
 ---
 
 # Product Lifecycle Manager
@@ -46,3 +48,6 @@ Legacy/discontinued products require a keep, noindex, merge, redirect, or retire
 - Do not upgrade product status without confirmed evidence.
 - Do not publish internal-only or not-public items.
 - Do not delete legacy pages without a URL plan.
+
+
+

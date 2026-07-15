@@ -1,3 +1,10 @@
+﻿---
+status: profile
+scope: medical-cn
+do_not_route: true
+superseded_by: docs/00-system-scope-and-sites.md
+---
+
 # 中文站上线检查清单
 
 ## 一、上线前原则
@@ -220,3 +227,4 @@
 * 更换主题
 * 覆盖正式站文件
 * 修改正式站询盘邮箱
+

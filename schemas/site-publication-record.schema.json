@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingpo.example/schemas/site-publication-record.schema.json",
+  "title": "Site Publication Record",
+  "type": "object",
+  "required": ["publication_id", "entity_id", "site_target", "locale", "slug", "indexation_status", "publication_state"],
+  "properties": {
+    "publication_id": { "type": "string", "pattern": "^PUB-[A-Z0-9-]+$" },
+    "entity_id": { "type": "string" },
+    "site_target": { "$ref": "common-definitions.schema.json#/$defs/siteTarget" },
+    "locale": { "$ref": "common-definitions.schema.json#/$defs/locale" },
+    "wordpress_post_id": { "type": "integer" },
+    "public_url": { "type": "string" },
+    "slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "seo_title": { "type": "string" },
+    "meta_description": { "type": "string" },
+    "canonical_url": { "type": "string" },
+    "indexation_status": { "enum": ["index", "noindex", "internal_only"] },
+    "publication_state": { "$ref": "common-definitions.schema.json#/$defs/workflowState" },
+    "published_at": { "type": "string", "format": "date-time" },
+    "last_synced_at": { "type": "string", "format": "date-time" },
+    "source_content_version": { "type": "string" }
+  },
+  "additionalProperties": false
+}

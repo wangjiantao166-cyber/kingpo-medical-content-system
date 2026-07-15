@@ -1,0 +1,11 @@
+{
+  "$schema_file": "release-gate.schema.json",
+  "release_id": "REL-BAD-001",
+  "entity_ids": ["PRD-DEMO-001"],
+  "checks": {},
+  "blockers": [],
+  "decision": "approved_for_publish",
+  "reviewer": "publisher",
+  "reviewer_role": "publisher",
+  "approval_timestamp": "2026-07-15T08:00:00Z"
+}

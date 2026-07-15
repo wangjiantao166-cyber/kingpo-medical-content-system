@@ -1,3 +1,10 @@
+﻿---
+status: profile
+scope: medical-cn
+do_not_route: true
+superseded_by: docs/00-system-scope-and-sites.md
+---
+
 # 视觉资产与图片体系规划
 
 ## 当前阶段边界

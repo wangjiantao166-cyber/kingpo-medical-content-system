@@ -1,3 +1,10 @@
+﻿---
+status: profile
+scope: medical-cn
+do_not_route: true
+superseded_by: docs/00-system-scope-and-sites.md
+---
+
 # 产品资料与来源要求
 
 ## 目的
@@ -41,7 +48,7 @@
 - Evidence Source
 - Human Verification Required
 
-国际标准体系详见：`docs/international-standards-landscape.md`。
+国际标准体系详见：`profiles/medical-cn/international-standards-landscape.md`。
 
 如果标准适用性不确定，标记为“需要人工确认”，不要写进最终产品页。
 
@@ -163,3 +170,5 @@
 ## 当前阶段结论
 
 当前阶段只建立医疗专站资料来源规则、国际标准映射体系和测试站部署计划，不录入正式网站，不发布页面，不创建 301，不连接服务器，不创建网站代码，不生成最终产品页面。
+
+

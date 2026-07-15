@@ -1,6 +1,8 @@
----
+﻿---
 name: seo-site-architecture-planner
-description: Plan the L0/L1/L2/L3 SEO site architecture, URL hierarchy, page types, search intent, and crawlable structure before WordPress build or content publishing.
+status: deprecated
+replacement: information-architecture-navigation
+do_not_use_for_new_work: true
 ---
 
 # SEO Site Architecture Planner
@@ -70,3 +72,6 @@ After creating the architecture map:
 - Do not create architecture that lacks source support.
 - Do not copy another website's structure exactly.
 - Do not create deep pages without a clear parent and inbound link path.
+
+
+

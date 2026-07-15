@@ -1,3 +1,10 @@
+﻿---
+status: profile
+scope: medical-cn
+do_not_route: true
+superseded_by: docs/00-system-scope-and-sites.md
+---
+
 # KingPo 中文站项目说明
 
 ## 项目名称
@@ -51,7 +58,7 @@ BCI and Active Implantable Medical Device Test Equipment Website
 
 除 GB 16174、YY 0989、YY/T 1996、ISO 14708 外，项目需要建立 IEC、ISO、ANSI/AAMI、ASTM、IEEE 等国际标准映射体系。
 
-标准体系详见：`docs/international-standards-landscape.md`。
+标准体系详见：`profiles/medical-cn/international-standards-landscape.md`。
 
 每个产品方向必须先做标准映射，再决定是否可以写页面。标准映射字段必须包含：
 
@@ -145,3 +152,5 @@ BCI and Active Implantable Medical Device Test Equipment Website
 - 复制同行内容
 - 把研发参考产品写成 KingPo 已有现货产品
 - 在未完成标准映射前生成最终产品页面
+
+

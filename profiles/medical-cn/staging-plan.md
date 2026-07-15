@@ -1,3 +1,10 @@
+﻿---
+status: profile
+scope: medical-cn
+do_not_route: true
+superseded_by: docs/00-system-scope-and-sites.md
+---
+
 # 测试站与预发布规划
 
 ## 核心原则
@@ -184,3 +191,4 @@ Fluke Biomedical / 福禄克和 WhaleTeq 仅用于医疗电气安全与医疗检
 - 表单测试收件邮箱
 - 是否需要密码保护测试站
 - 是否有现成品牌素材、产品图片和 PDF
+

@@ -15,10 +15,22 @@
     "coverage_scope": { "type": "string" },
     "required_configuration": { "type": "string" },
     "evidence_level": { "enum": ["none", "source_suggested", "engineering_confirmed", "test_document_confirmed"] },
-    "source_ids": { "type": "array", "items": { "type": "string" } },
+    "source_ids": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string" } },
     "allowed_public_wording": { "type": "string" },
     "reviewer": { "type": "string" },
     "review_status": { "enum": ["unreviewed", "approved", "needs_confirmation", "blocked"] }
   },
+  "allOf": [
+    {
+      "if": { "properties": { "review_status": { "const": "approved" } } },
+      "then": {
+        "required": ["reviewer", "allowed_public_wording"],
+        "properties": {
+          "evidence_level": { "enum": ["engineering_confirmed", "test_document_confirmed"] },
+          "source_ids": { "minItems": 1 }
+        }
+      }
+    }
+  ],
   "additionalProperties": false
 }

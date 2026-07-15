@@ -1,0 +1,11 @@
+{
+  "$schema_file": "claim-record.schema.json",
+  "claim_id": "CLM-BAD-001",
+  "entity_id": "PRD-DEMO-001",
+  "claim_text": "Fully certified to IEC 60601-1.",
+  "claim_type": "certification",
+  "risk_level": "REGULATORY_HIGH",
+  "source_ids": [],
+  "evidence_level": "none",
+  "status": "approved"
+}

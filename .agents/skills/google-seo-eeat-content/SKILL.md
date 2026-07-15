@@ -1,6 +1,8 @@
----
+﻿---
 name: google-seo-eeat-content
-description: Apply Google SEO, E-E-A-T, people-first content, customer-first B2B writing, and Search Content Trust Signals to KingPo product and technical pages.
+status: deprecated
+replacement: editorial-trust-review
+do_not_use_for_new_work: true
 ---
 
 # Google SEO and E-E-A-T Content
@@ -92,3 +94,6 @@ Return:
 - Safer standard wording
 - Metadata recommendations
 - Publish readiness recommendation
+
+
+

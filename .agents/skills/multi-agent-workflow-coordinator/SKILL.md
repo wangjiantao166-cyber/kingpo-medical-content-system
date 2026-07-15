@@ -1,6 +1,8 @@
----
+﻿---
 name: multi-agent-workflow-coordinator
-description: Coordinate all KingPo website agents so product data, SEO, standards, design, WordPress, internal links, assets, and QA work together instead of producing isolated outputs.
+status: deprecated
+replacement: workflow-orchestrator
+do_not_use_for_new_work: true
 ---
 
 # Multi-Agent Workflow Coordinator
@@ -77,3 +79,4 @@ If agents disagree:
 - Do not skip source verification for speed.
 - Do not let SEO suggestions override factual accuracy.
 - Do not let design decisions hide important technical content.
+

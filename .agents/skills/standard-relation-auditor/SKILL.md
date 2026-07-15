@@ -1,6 +1,8 @@
----
+﻿---
 name: standard-relation-auditor
-description: Review product-standard relationships and prevent unsupported compliance, standard-version, or clause claims.
+status: deprecated
+replacement: standards-claims-compliance
+do_not_use_for_new_work: true
 ---
 
 # Standard Relation Auditor
@@ -75,3 +77,6 @@ Do not reproduce paid or copyrighted standards text, tables, figures, or detaile
 - Do not use competitor pages as evidence of KingPo compliance.
 - Do not publish unclear standards as confirmed.
 - Do not invent standard versions, clause numbers, test conditions, acceptance criteria, or compliance conclusions.
+
+
+

@@ -1,6 +1,8 @@
----
+﻿---
 name: product-publish-qa
-description: Review product, standard, application, and article drafts for publication readiness, claim safety, source quality, SEO, assets, and internal links.
+status: deprecated
+replacement: release-quality-gate
+do_not_use_for_new_work: true
 ---
 
 # Product Publish QA
@@ -58,3 +60,6 @@ Return one of:
 - Do not approve pages with unverified high-risk claims.
 - Do not approve copied competitor content.
 - Do not approve public use of unauthorized assets.
+
+
+

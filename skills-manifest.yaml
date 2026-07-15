@@ -1,160 +1,187 @@
-version: 1
+version: 2
 system: kingpo-content-os-v2
-policy: Old skills remain in the repository during migration. New work should route through the 13 active v2 domains below.
+schema: schemas/skills-manifest.schema.json
+policy: Old skills remain during migration. New work must route through active v2 skills unless a profile explicitly permits a legacy skill.
 active_skills:
   - name: workflow-orchestrator
-    version: 0.1.0
+    version: 0.2.0
     status: active
     owner_domain: workflow
     risk_level: HIGH
     accepted_inputs: [agent_handoff, task_request]
     produced_outputs: [routing_decision, state_transition]
-    allowed_mutations: [docs, schemas, manifests]
-    required_predecessors: []
+    allowed_mutations: [docs, schemas, manifests, reports]
+    required_agent_predecessors: []
+    required_artifacts: [docs/DOCUMENT-INDEX.yaml, docs/agent-contracts-and-state-machine.md]
+    required_schemas: [agent-handoff.schema.json]
     possible_next_steps: [product-data-governance, information-architecture-navigation, release-quality-gate]
     human_approval_required: production_change
-    deprecated_replacement: null
+    replaces: [multi-agent-workflow-coordinator]
   - name: product-data-governance
-    version: 0.1.0
+    version: 0.2.0
     status: active
     owner_domain: product_master_data
     risk_level: HIGH
     accepted_inputs: [source_record, product_record]
     produced_outputs: [structured_product_record, source_conflict_report]
-    allowed_mutations: [product_records, source_records, claim_records]
-    required_predecessors: []
+    allowed_mutations: [fixtures, source_records, product_records, specification_records, claim_drafts]
+    required_agent_predecessors: []
+    required_artifacts: [docs/source-tier-and-conflict-policy.md, docs/authoritative-source-of-truth.md]
+    required_schemas: [source-record.schema.json, product-record.schema.json, specification-record.schema.json]
     possible_next_steps: [standards-claims-compliance, content-strategy-authoring, release-quality-gate]
     human_approval_required: high_risk_claims
-    deprecated_replacement: [product-knowledge-base, product-lifecycle-manager]
+    replaces: [product-knowledge-base, product-lifecycle-manager]
   - name: standards-claims-compliance
-    version: 0.1.0
+    version: 0.2.0
     status: active
     owner_domain: standards_and_claims
     risk_level: REGULATORY_HIGH
     accepted_inputs: [standard_record, standard_mapping, claim_record]
     produced_outputs: [approved_claim_wording, blocked_claims, standard_mapping_review]
-    allowed_mutations: [claim_records, standard_mappings]
-    required_predecessors: [product-data-governance]
+    allowed_mutations: [claim_records, standard_mappings, standard_records]
+    required_agent_predecessors: [product-data-governance]
+    required_artifacts: [docs/claim-evidence-ledger.md, docs/standard-version-and-claim-policy.md]
+    required_schemas: [standard-record.schema.json, standard-mapping.schema.json, claim-record.schema.json]
     possible_next_steps: [content-strategy-authoring, editorial-trust-review, release-quality-gate]
     human_approval_required: always_for_compliance_claims
-    deprecated_replacement: [standard-relation-auditor, medical-standards-mapping]
+    replaces: [standard-relation-auditor]
   - name: content-strategy-authoring
-    version: 0.1.0
+    version: 0.2.0
     status: active
     owner_domain: content
     risk_level: MEDIUM
     accepted_inputs: [page_brief, product_record, application_record, approved_claims]
     produced_outputs: [draft_content, content_brief]
-    allowed_mutations: [draft_docs, page_briefs]
-    required_predecessors: [product-data-governance]
+    allowed_mutations: [draft_docs, page_briefs, profile_content_drafts]
+    required_agent_predecessors: [product-data-governance]
+    required_artifacts: [docs/editorial-authorship-ai-policy.md]
+    required_schemas: [page-brief.schema.json, product-record.schema.json, application-record.schema.json]
     possible_next_steps: [editorial-trust-review, asset-visual-production, technical-seo-link-graph]
     human_approval_required: before_publish
-    deprecated_replacement: [ai-product-page-generator, application-page-system, cn-content-rewrite, cn-product-page-seo]
+    replaces: [ai-product-page-generator, application-page-system]
   - name: editorial-trust-review
-    version: 0.1.0
+    version: 0.2.0
     status: active
     owner_domain: editorial_trust
     risk_level: HIGH
     accepted_inputs: [draft_content, claim_record, source_record]
     produced_outputs: [trust_review, ai_policy_review]
-    allowed_mutations: [draft_docs, review_notes]
-    required_predecessors: [content-strategy-authoring]
+    allowed_mutations: [draft_docs, review_notes, reports]
+    required_agent_predecessors: [content-strategy-authoring]
+    required_artifacts: [docs/editorial-authorship-ai-policy.md]
+    required_schemas: [claim-record.schema.json, source-record.schema.json]
     possible_next_steps: [technical-seo-link-graph, release-quality-gate]
     human_approval_required: high_risk_claims
-    deprecated_replacement: [google-seo-eeat-content]
+    replaces: [google-seo-eeat-content]
   - name: information-architecture-navigation
-    version: 0.1.0
+    version: 0.2.0
     status: active
     owner_domain: information_architecture
     risk_level: HIGH
     accepted_inputs: [site_map, product_taxonomies, search_intent]
     produced_outputs: [navigation_plan, url_plan, content_cluster_plan]
-    allowed_mutations: [docs, url_maps]
-    required_predecessors: []
+    allowed_mutations: [docs, url_maps, seo_registries]
+    required_agent_predecessors: []
+    required_artifacts: [docs/00-system-scope-and-sites.md, docs/url-indexation-canonical-facets.md]
+    required_schemas: [page-brief.schema.json]
     possible_next_steps: [wordpress-content-model-admin, wordpress-theme-template, technical-seo-link-graph]
     human_approval_required: major_navigation_change
-    deprecated_replacement: [seo-site-architecture-planner, content-cluster-planner, navigation-mega-menu-architect, homepage-authority-hub, navigation-ia-architect]
+    replaces: [seo-site-architecture-planner, content-cluster-planner, navigation-mega-menu-architect, homepage-authority-hub, navigation-ia-architect]
   - name: technical-seo-link-graph
-    version: 0.1.0
+    version: 0.2.0
     status: active
     owner_domain: technical_seo
     risk_level: HIGH
-    accepted_inputs: [url_plan, link_graph, page_records]
-    produced_outputs: [indexation_rules, canonical_decisions, link_audit]
-    allowed_mutations: [docs, link_maps, validation_reports]
-    required_predecessors: [information-architecture-navigation]
+    accepted_inputs: [url_plan, link_graph, page_records, canonical_decision]
+    produced_outputs: [indexation_rules, canonical_decisions, link_audit, schema_plan]
+    allowed_mutations: [docs, link_maps, validation_reports, seo_registries]
+    required_agent_predecessors: [information-architecture-navigation]
+    required_artifacts: [docs/url-indexation-canonical-facets.md, docs/schema-markup-matrix.md]
+    required_schemas: [canonical-decision.schema.json, site-publication-record.schema.json]
     possible_next_steps: [release-quality-gate]
     human_approval_required: redirects_or_noindex_on_live_pages
-    deprecated_replacement: [internal-linking-architect, orphan-link-auditor, content-refresh-auditor, baidu-technical-seo]
+    replaces: [internal-linking-architect, orphan-link-auditor, content-refresh-auditor]
   - name: wordpress-content-model-admin
-    version: 0.1.0
+    version: 0.2.0
     status: active
     owner_domain: wordpress_admin
     risk_level: HIGH
     accepted_inputs: [wordpress_spec, schemas]
     produced_outputs: [cpt_spec, acf_field_spec, admin_workflow_spec]
     allowed_mutations: [wordpress-plugin, docs]
-    required_predecessors: [entity-relationship-model]
+    required_agent_predecessors: [product-data-governance]
+    required_artifacts: [docs/entity-relationship-model.md, docs/wordpress-implementation-spec.md]
+    required_schemas: [product-record.schema.json, standard-mapping.schema.json, site-publication-record.schema.json]
     possible_next_steps: [wordpress-theme-template, release-quality-gate]
     human_approval_required: production_installation
-    deprecated_replacement: [wordpress-cpt-acf-builder, wordpress-admin-operator, wordpress-backend-workflow, wordpress-b2b-catalog]
+    replaces: [wordpress-cpt-acf-builder, wordpress-backend-workflow]
   - name: wordpress-theme-template
-    version: 0.1.0
+    version: 0.2.0
     status: active
     owner_domain: frontend
     risk_level: MEDIUM
     accepted_inputs: [design_system, cpt_spec, template_requirements]
     produced_outputs: [theme_scaffold, block_patterns, template_specs]
     allowed_mutations: [wordpress-theme, docs]
-    required_predecessors: [wordpress-content-model-admin]
+    required_agent_predecessors: [wordpress-content-model-admin]
+    required_artifacts: [docs/frontend-design-system-and-templates.md]
+    required_schemas: [asset-manifest.schema.json, site-publication-record.schema.json]
     possible_next_steps: [asset-visual-production, technical-seo-link-graph, release-quality-gate]
     human_approval_required: production_theme_activation
-    deprecated_replacement: [theme-framework-planner, page-template-designer, site-ux-template-system]
+    replaces: [theme-framework-planner, page-template-designer, site-ux-template-system]
   - name: asset-visual-production
-    version: 0.1.0
+    version: 0.2.0
     status: active
     owner_domain: assets_and_visuals
     risk_level: HIGH
     accepted_inputs: [asset_manifest, visual_brief, product_record]
     produced_outputs: [approved_asset_manifest, visual_qa_report]
     allowed_mutations: [asset_records, visual_specs, generated_assets]
-    required_predecessors: [product-data-governance]
+    required_agent_predecessors: [product-data-governance]
+    required_artifacts: [docs/asset-rights-and-visual-production.md]
+    required_schemas: [asset-manifest.schema.json, product-record.schema.json]
     possible_next_steps: [content-strategy-authoring, wordpress-theme-template, release-quality-gate]
     human_approval_required: public_customer_or_ai_assets
-    deprecated_replacement: [asset-library-manager, visual-asset-generator, brand-art-director]
+    replaces: [asset-library-manager, visual-asset-generator, brand-art-director]
   - name: conversion-analytics
-    version: 0.1.0
+    version: 0.2.0
     status: active
     owner_domain: conversion
     risk_level: MEDIUM
     accepted_inputs: [page_brief, form_spec, analytics_plan]
     produced_outputs: [cta_plan, event_tracking_plan, inquiry_quality_rules]
     allowed_mutations: [docs, analytics_specs]
-    required_predecessors: []
+    required_agent_predecessors: []
+    required_artifacts: [docs/authoritative-source-of-truth.md]
+    required_schemas: [page-brief.schema.json]
     possible_next_steps: [release-quality-gate]
     human_approval_required: privacy_or_tracking_change
-    deprecated_replacement: [inquiry-conversion]
+    replaces: [inquiry-conversion]
   - name: data-migration-sync
-    version: 0.1.0
+    version: 0.2.0
     status: active
     owner_domain: data_migration
     risk_level: HIGH
     accepted_inputs: [spreadsheet, export_file, source_record]
     produced_outputs: [migration_plan, dry_run_report, rollback_plan]
     allowed_mutations: [fixtures, migration_maps, scripts]
-    required_predecessors: [product-data-governance]
+    required_agent_predecessors: [product-data-governance]
+    required_artifacts: [docs/source-tier-and-conflict-policy.md]
+    required_schemas: [source-record.schema.json, product-record.schema.json]
     possible_next_steps: [release-quality-gate]
     human_approval_required: bulk_import_or_production_sync
-    deprecated_replacement: [data-import-export, product-data-collector]
+    replaces: [data-import-export]
   - name: release-quality-gate
-    version: 0.1.0
+    version: 0.2.0
     status: active
     owner_domain: release_quality
     risk_level: PRODUCTION_CHANGE
     accepted_inputs: [release_gate, validation_report, agent_handoff]
     produced_outputs: [approved_release, blocked_release]
     allowed_mutations: [reports, release_notes]
-    required_predecessors: []
+    required_agent_predecessors: []
+    required_artifacts: [docs/agent-contracts-and-state-machine.md]
+    required_schemas: [release-gate.schema.json, validation-error.schema.json]
     possible_next_steps: []
     human_approval_required: always_for_publish
-    deprecated_replacement: [product-publish-qa, qa-launch-check, security-backup]
+    replaces: [product-publish-qa]

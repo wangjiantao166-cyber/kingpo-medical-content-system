@@ -53,6 +53,35 @@ Do not mix product domain, standard family, test method, and buyer industry into
 - Product family and near-duplicate model pages: require a canonical decision.
 - Legacy models: require keep, merge, redirect, or retire decision.
 
+## Facet Matrix
+
+| Facet or URL Type | Crawl | Index | Canonical | Sitemap | Empty Result |
+| --- | --- | --- | --- | --- | --- |
+| Product domain archive | yes | yes | self | yes | 404 or noindex utility page |
+| Curated test-method landing page | yes | after review | self | after review | 404 |
+| Application or industry landing page | yes | after review | self | after review | 404 |
+| Sort parameter | controlled or nofollowed | no | base archive | no | not applicable |
+| Pagination | yes when needed | design-dependent | self or series strategy | normally no | 404 |
+| Multiple arbitrary filters | restricted | no | base or no canonical if blocked | no | 404 |
+| Internal search | accessible | noindex | self | no | 200 |
+| Invalid parameter | no useful crawl | no | base or 404 | no | 404 |
+
+Parameter order, case, trailing slash, and empty parameters must be normalized. JavaScript filter links must be designed so they do not create uncontrolled crawl spaces.
+
+## Sitemap Rule
+
+Sitemaps may include only URLs that are:
+
+- HTTP 200;
+- indexable;
+- self-canonical;
+- not redirected;
+- not ordinary filters;
+- not internal workflow states;
+- supported by a meaningful `lastmod`.
+
+Do not refresh `lastmod` unless the visible page content or primary structured data changed in a meaningful way.
+
 ## Internal Link Rule
 
 Do not enforce a fixed number of links. Link only when the relationship helps a buyer, engineer, lab, or search crawler understand a real relationship.

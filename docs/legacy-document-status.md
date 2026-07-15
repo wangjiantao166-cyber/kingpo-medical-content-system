@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This repository contains older planning documents for a Chinese medical testing equipment website. They are useful background, but they are no longer the top-level system scope.
+This repository contains older planning documents for a Chinese medical testing equipment website under `profiles/medical-cn/`. They are useful background, but they are no longer the top-level system scope.
 
 The current controlling documents are:
 
@@ -16,10 +16,12 @@ The current controlling documents are:
 - `docs/frontend-design-system-and-templates.md`
 - `skills-manifest.yaml`
 - `schemas/*.schema.json`
+- `docs/DOCUMENT-INDEX.yaml`
+- `docs/authoritative-source-of-truth.md`
 
 ## How to Use Older Documents
 
-Older Chinese medical-site documents may be used as:
+Older Chinese medical-site documents may be used as scoped profile material only when explicitly requested:
 
 - vertical market notes;
 - future medical fixture ideas;
@@ -37,3 +39,12 @@ They must not be used to:
 ## Migration Rule
 
 When an old document conflicts with a v2 document, the v2 document wins. Do not delete old documents until their useful content has been migrated or explicitly retired.
+
+Every profile file must include frontmatter with:
+
+```yaml
+status: profile
+scope: medical-cn
+do_not_route: true
+superseded_by: docs/00-system-scope-and-sites.md
+```

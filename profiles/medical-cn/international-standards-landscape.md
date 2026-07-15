@@ -1,3 +1,10 @@
+﻿---
+status: profile
+scope: medical-cn
+do_not_route: true
+superseded_by: docs/00-system-scope-and-sites.md
+---
+
 # 国际医疗器械标准体系映射
 
 ## 目的
@@ -119,3 +126,4 @@
 - 未确认的标准版本、条款号、测试条件。
 - 根据同行资料推断出的 KingPo 参数。
 - 将背景标准写成主标准。
+

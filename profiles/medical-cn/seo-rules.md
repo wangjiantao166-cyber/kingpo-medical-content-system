@@ -1,3 +1,10 @@
+﻿---
+status: profile
+scope: medical-cn
+do_not_route: true
+superseded_by: docs/00-system-scope-and-sites.md
+---
+
 # 医疗测试设备中文站 SEO 规则
 
 ## SEO 目标
@@ -262,3 +269,4 @@ FAQ 不要写成广告语。
 重复风险：高 / 中 / 低
 
 并说明优化建议。
+

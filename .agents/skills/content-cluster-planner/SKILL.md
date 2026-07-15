@@ -1,6 +1,8 @@
----
+﻿---
 name: content-cluster-planner
-description: Build product content clusters connecting pillar pages, products, applications, standards, technical articles, PDFs, and inquiry CTAs.
+status: deprecated
+replacement: information-architecture-navigation
+do_not_use_for_new_work: true
 ---
 
 # Content Cluster Planner
@@ -67,3 +69,6 @@ Work with `seo-site-architecture-planner`, `product-knowledge-base`, `applicatio
 - Do not create clusters with no product support.
 - Do not create articles that never link to commercial pages.
 - Do not create standard pages that imply unsupported compliance.
+
+
+

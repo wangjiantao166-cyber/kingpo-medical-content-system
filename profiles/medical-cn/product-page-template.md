@@ -1,3 +1,10 @@
+﻿---
+status: profile
+scope: medical-cn
+do_not_route: true
+superseded_by: docs/00-system-scope-and-sites.md
+---
+
 # 医疗测试设备中文产品页模板规则
 
 ## 页面目标
@@ -253,3 +260,4 @@ H1 后必须用 1-2 句话说明设备用途。
 示例：
 
 如需确认该设备是否适用于您的 BCI、有源植入式医疗器械或医疗电气安全测试项目，请联系 KingPo 技术团队。请提供适用标准、样品类型、测试项目、信号或电气参数范围，以及是否涉及注册检验、研发验证或第三方检测场景。
+

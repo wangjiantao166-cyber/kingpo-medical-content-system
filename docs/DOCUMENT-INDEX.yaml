@@ -1,0 +1,111 @@
+version: 1
+policy: Documents marked normative are the active source of truth. Profile documents may guide a scoped vertical only when explicitly requested. Documents with do_not_route must not be used for default agent routing.
+documents:
+  - path: docs/00-system-scope-and-sites.md
+    status: normative
+    scope: global
+    owner_agent: workflow-orchestrator
+    supersedes: [profiles/medical-cn/project-brief.md]
+    do_not_route: false
+  - path: docs/source-tier-and-conflict-policy.md
+    status: normative
+    scope: global
+    owner_agent: product-data-governance
+    supersedes: [profiles/medical-cn/source-data-requirements.md, profiles/medical-cn/product-source-priority.md]
+    do_not_route: false
+  - path: docs/authoritative-source-of-truth.md
+    status: normative
+    scope: global
+    owner_agent: product-data-governance
+    supersedes: []
+    do_not_route: false
+  - path: docs/role-capability-approval-matrix.md
+    status: normative
+    scope: global
+    owner_agent: wordpress-content-model-admin
+    supersedes: []
+    do_not_route: false
+  - path: docs/site-publication-sync-model.md
+    status: normative
+    scope: global
+    owner_agent: technical-seo-link-graph
+    supersedes: []
+    do_not_route: false
+  - path: docs/entity-relationship-model.md
+    status: normative
+    scope: global
+    owner_agent: product-data-governance
+    supersedes: []
+    do_not_route: false
+  - path: docs/claim-evidence-ledger.md
+    status: normative
+    scope: global
+    owner_agent: standards-claims-compliance
+    supersedes: []
+    do_not_route: false
+  - path: docs/agent-contracts-and-state-machine.md
+    status: normative
+    scope: global
+    owner_agent: workflow-orchestrator
+    supersedes: [profiles/medical-cn/agent-collaboration-plan.md]
+    do_not_route: false
+  - path: docs/wordpress-implementation-spec.md
+    status: normative
+    scope: global
+    owner_agent: wordpress-content-model-admin
+    supersedes: [profiles/medical-cn/wordpress-plugin-plan.md, profiles/medical-cn/wordpress-admin-operation-guide.md]
+    do_not_route: false
+  - path: docs/url-indexation-canonical-facets.md
+    status: normative
+    scope: global
+    owner_agent: technical-seo-link-graph
+    supersedes: [profiles/medical-cn/seo-rules.md, profiles/medical-cn/site-architecture.md]
+    do_not_route: false
+  - path: docs/schema-markup-matrix.md
+    status: normative
+    scope: global
+    owner_agent: technical-seo-link-graph
+    supersedes: []
+    do_not_route: false
+  - path: docs/deployment-backup-rollback-runbook.md
+    status: normative
+    scope: global
+    owner_agent: release-quality-gate
+    supersedes: []
+    do_not_route: false
+  - path: docs/frontend-design-system-and-templates.md
+    status: normative
+    scope: global
+    owner_agent: wordpress-theme-template
+    supersedes: [profiles/medical-cn/website-template-and-ux-plan.md]
+    do_not_route: false
+  - path: docs/asset-rights-and-visual-production.md
+    status: normative
+    scope: global
+    owner_agent: asset-visual-production
+    supersedes: [profiles/medical-cn/visual-asset-plan.md]
+    do_not_route: false
+  - path: docs/standard-version-and-claim-policy.md
+    status: normative
+    scope: global
+    owner_agent: standards-claims-compliance
+    supersedes: [profiles/medical-cn/international-standards-landscape.md]
+    do_not_route: false
+  - path: docs/editorial-authorship-ai-policy.md
+    status: normative
+    scope: global
+    owner_agent: editorial-trust-review
+    supersedes: []
+    do_not_route: false
+  - path: docs/legacy-document-status.md
+    status: reference
+    scope: global
+    owner_agent: workflow-orchestrator
+    supersedes: []
+    do_not_route: false
+profiles:
+  - path: profiles/medical-cn/
+    status: profile
+    scope: medical-cn
+    owner_agent: information-architecture-navigation
+    do_not_route: true

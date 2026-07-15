@@ -10,7 +10,10 @@
     "spec_group": { "type": "string" },
     "spec_name": { "type": "string" },
     "value_type": { "enum": ["text", "number", "range", "boolean", "list"] },
-    "nominal_value": {},
+    "nominal_value": { "type": "number" },
+    "text_value": { "type": "string" },
+    "boolean_value": { "type": "boolean" },
+    "list_values": { "type": "array", "items": { "type": "string" } },
     "minimum_value": { "type": "number" },
     "maximum_value": { "type": "number" },
     "unit": { "type": "string" },
@@ -24,5 +27,27 @@
     "public_visibility": { "enum": ["public_allowed", "draft_only", "internal_only"] },
     "display_order": { "type": "integer" }
   },
+  "allOf": [
+    {
+      "if": { "properties": { "value_type": { "const": "number" } } },
+      "then": { "required": ["nominal_value"] }
+    },
+    {
+      "if": { "properties": { "value_type": { "const": "range" } } },
+      "then": { "required": ["minimum_value", "maximum_value"] }
+    },
+    {
+      "if": { "properties": { "value_type": { "const": "boolean" } } },
+      "then": { "required": ["boolean_value"] }
+    },
+    {
+      "if": { "properties": { "value_type": { "const": "list" } } },
+      "then": { "required": ["list_values"] }
+    },
+    {
+      "if": { "properties": { "value_type": { "const": "text" } } },
+      "then": { "required": ["text_value"] }
+    }
+  ],
   "additionalProperties": false
 }

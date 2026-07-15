@@ -1,6 +1,8 @@
----
+﻿---
 name: navigation-mega-menu-architect
-description: Design main navigation, product mega menu, mobile navigation, breadcrumbs, and footer navigation based on the approved SEO site architecture.
+status: deprecated
+replacement: information-architecture-navigation
+do_not_use_for_new_work: true
 ---
 
 # Navigation and Mega Menu Architect
@@ -62,3 +64,6 @@ This agent depends on:
 - Do not hide important L1 pages.
 - Do not use vague labels that buyers cannot understand.
 - Do not use misleading category names for SEO only.
+
+
+

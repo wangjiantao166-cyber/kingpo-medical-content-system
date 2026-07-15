@@ -1,6 +1,8 @@
----
+﻿---
 name: wordpress-draft-publisher
-description: Create or update WordPress draft content from approved structured records while preserving review and approval controls.
+status: deprecated
+replacement: wordpress-content-model-admin
+do_not_use_for_new_work: true
 ---
 
 # WordPress Draft Publisher
@@ -51,3 +53,6 @@ Create drafts by default. Do not publish unless the user explicitly approves pub
 - Do not upload unapproved images or PDFs.
 - Do not overwrite existing product data without change notes.
 - Do not modify production forms, themes, plugins, or DNS.
+
+
+

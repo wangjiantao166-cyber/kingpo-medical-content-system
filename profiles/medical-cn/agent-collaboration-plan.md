@@ -1,3 +1,10 @@
+﻿---
+status: profile
+scope: medical-cn
+do_not_route: true
+superseded_by: docs/00-system-scope-and-sites.md
+---
+
 # Agent 协作规划
 
 ## 协作目标
@@ -184,3 +191,4 @@
 - 下一步建议
 - 是否涉及生产环境：是 / 否
 - 是否需要人工批准：是 / 否
+

@@ -1,0 +1,15 @@
+{
+  "$schema_file": "standard-mapping.schema.json",
+  "mapping_id": "MAP-DEMO-001",
+  "product_id": "PRD-DEMO-001",
+  "standard_id": "STD-DEMO-001",
+  "edition": "needs-confirmed-edition",
+  "relationship_type": "can_be_configured_for",
+  "coverage_scope": "Selected test items after configuration review.",
+  "required_configuration": "Fixture and parameter confirmation required.",
+  "evidence_level": "engineering_confirmed",
+  "source_ids": ["SRC-DEMO-001"],
+  "allowed_public_wording": "Can be configured for selected test items after review.",
+  "reviewer": "standards reviewer",
+  "review_status": "approved"
+}

@@ -63,3 +63,13 @@ Choose one final source of truth for SEO title and meta description:
 - custom fields synchronized into the SEO plugin.
 
 Do not allow both to be edited independently.
+
+## Roles and Workflow
+
+WordPress roles and capabilities must follow `docs/role-capability-approval-matrix.md`.
+
+The publication status must use one controlled workflow source. If native WordPress statuses are extended, they must map directly to the v2 workflow states in `docs/agent-contracts-and-state-machine.md`.
+
+## Site Publication Records
+
+Do not store multi-site slug, canonical, SEO title, meta description, and WordPress post ID directly in the product master record. Use `schemas/site-publication-record.schema.json` and `docs/site-publication-sync-model.md`.

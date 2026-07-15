@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingpo.example/schemas/common-definitions.schema.json",
+  "title": "Common Definitions",
+  "$defs": {
+    "agentName": {
+      "enum": [
+        "workflow-orchestrator",
+        "product-data-governance",
+        "standards-claims-compliance",
+        "content-strategy-authoring",
+        "editorial-trust-review",
+        "information-architecture-navigation",
+        "technical-seo-link-graph",
+        "wordpress-content-model-admin",
+        "wordpress-theme-template",
+        "asset-visual-production",
+        "conversion-analytics",
+        "data-migration-sync",
+        "release-quality-gate"
+      ]
+    },
+    "riskLevel": {
+      "enum": ["LOW", "MEDIUM", "HIGH", "REGULATORY_HIGH", "PRODUCTION_CHANGE"]
+    },
+    "workflowState": {
+      "enum": [
+        "source_incomplete",
+        "structured",
+        "technical_review",
+        "standards_review",
+        "content_draft",
+        "editorial_review",
+        "visual_review",
+        "seo_review",
+        "ready_for_publish",
+        "published",
+        "refresh_due",
+        "retired",
+        "blocked"
+      ]
+    },
+    "blockerCode": {
+      "enum": [
+        "missing_source",
+        "source_conflict",
+        "unverified_standard",
+        "unsupported_claim",
+        "missing_reviewer",
+        "missing_public_asset_permission",
+        "duplicate_slug",
+        "canonical_unresolved",
+        "thin_or_duplicate_page",
+        "production_approval_required",
+        "privacy_risk",
+        "competitor_source_misuse",
+        "release_check_failed"
+      ]
+    },
+    "reviewRole": {
+      "enum": [
+        "content_editor",
+        "product_data_editor",
+        "technical_reviewer",
+        "standards_reviewer",
+        "asset_reviewer",
+        "seo_reviewer",
+        "publisher",
+        "administrator"
+      ]
+    },
+    "publicVisibility": {
+      "enum": ["public_allowed", "draft_only", "internal_only", "not_public"]
+    },
+    "locale": {
+      "type": "string",
+      "pattern": "^[a-z]{2}(-[A-Z]{2})?$"
+    },
+    "siteTarget": {
+      "enum": ["dgkingpo.com", "batterytestingmachine.com", "kingpocn.com", "kingpo.hk", "staging", "future_vertical_site"]
+    }
+  }
+}
