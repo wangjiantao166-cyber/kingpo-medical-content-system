@@ -252,6 +252,8 @@ Additional system-maintenance agents in this repository:
 - Product Knowledge Base Agent
 - Product Lifecycle Manager
 - Application Page System Agent
+- Google SEO and E-E-A-T Content Agent
+- AI Product Page Generator Agent
 - Standard Relation Auditor
 - Internal Linking Architect
 - WordPress CPT / ACF Builder
