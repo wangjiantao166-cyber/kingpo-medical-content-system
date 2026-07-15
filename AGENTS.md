@@ -2,9 +2,18 @@
 
 ## Repository Purpose
 
-This repository is the KingPo medical test equipment WordPress content system blueprint.
+This repository is the KingPo test equipment WordPress content system blueprint.
 
 It supports a B2B product knowledge website for structured product records, WordPress CPT/ACF fields, product lifecycle status, applications, standards, internal linking, Google SEO, E-E-A-T, AI-assisted product page drafting, asset governance, inquiry conversion, and publishing QA.
+
+## Existing Company Source Context
+
+KingPo should not be described as only a medical device testing company. Existing source material mainly comes from:
+
+- https://www.dgkingpo.com/ as the KingPo / DGKingPo main site and broad test equipment source
+- https://www.batterytestingmachine.com/ as a KingPo English product site covering battery testing equipment, environmental test chambers, safety compliance testing equipment, and related medical test equipment categories
+
+The new medical-focused content system should use these sites as primary KingPo-owned source references where relevant, while still recording exact page-level sources and human verification status.
 
 ## Core Content Rule
 
