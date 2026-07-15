@@ -88,6 +88,8 @@ If product data is unclear, conflicting, or only a roadmap item, mark it as â€œé
 
 Do not publish R&D reference products as available KingPo stock products unless confirmed by the user.
 
+Standards must not be invented. If existing materials are incomplete, agents may consult official or authoritative standards sources such as IEC, ISO, EN/CEN/CENELEC/ETSI, UL, UN ECE, SASO, BIS, ANSI/AAMI, ASTM, and IEEE for public standard titles, scope, standard families, and high-level relevance. Agents must not invent versions, clause numbers, test conditions, acceptance criteria, or KingPo compliance conclusions.
+
 ## Source Ownership Rule
 
 Source ownership must be clearly classified before product data is used.
