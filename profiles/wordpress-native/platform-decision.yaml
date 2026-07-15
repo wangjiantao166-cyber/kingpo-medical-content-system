@@ -1,0 +1,11 @@
+profile: wordpress-native
+selected_platform: wordpress
+content_backend: wordpress
+frontend: native-block-theme
+headless: false
+nextjs: disabled
+database: wordpress-mysql
+operations_interface: wp-cli
+rest_api: restricted
+direct_database_writes: prohibited
+production_approval: human_required

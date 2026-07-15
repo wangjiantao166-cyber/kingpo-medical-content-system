@@ -1,0 +1,14 @@
+{
+  "name": "kingpo/content-core",
+  "description": "KingPo B2B content core WordPress plugin.",
+  "type": "wordpress-plugin",
+  "license": "proprietary",
+  "autoload": {
+    "psr-4": {
+      "KingPo\\ContentCore\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.0"
+  }
+}

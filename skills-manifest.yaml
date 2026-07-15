@@ -171,6 +171,20 @@ active_skills:
     possible_next_steps: [release-quality-gate]
     human_approval_required: bulk_import_or_production_sync
     replaces: [data-import-export]
+  - name: wordpress-operations-deployment
+    version: 0.1.0
+    status: active
+    owner_domain: wordpress_operations
+    risk_level: PRODUCTION_CHANGE
+    accepted_inputs: [wordpress_site_record, deployment_plan, release_gate]
+    produced_outputs: [environment_audit, deployment_report, backup_record, rollback_report]
+    allowed_mutations: [wordpress_staging, deployment_scripts, operational_reports]
+    required_agent_predecessors: [wordpress-content-model-admin, wordpress-theme-template]
+    required_artifacts: [docs/wordpress-operations-and-deployment.md, docs/deployment-backup-rollback-runbook.md]
+    required_schemas: [wordpress-site-record.schema.json, deployment-plan.schema.json, backup-restore-record.schema.json]
+    possible_next_steps: [release-quality-gate]
+    human_approval_required: always_for_production
+    replaces: []
   - name: release-quality-gate
     version: 0.2.0
     status: active

@@ -18,3 +18,29 @@ The repository currently contains:
 - Agent/skill workflows for product data governance, standards review, content drafting, technical SEO, WordPress implementation, visual assets, QA, and data import/export
 
 This repository does not directly modify a production website. All implementation should start in a staging WordPress environment.
+
+## Platform Decision
+
+This repository is not a single website and is not a deployable finished site by itself. It is KingPo's company-level B2B content operating system:
+
+- content governance layer
+- product and standards data contracts
+- agent operation rules
+- WordPress base platform
+- SEO and claim-safety rules
+- publishing, deployment, backup, and operations control plane
+
+Current default implementation platform:
+
+```yaml
+platform: wordpress
+frontend: native-wordpress-block-theme
+headless: false
+nextjs: disabled_by_default
+content_database: wordpress-mysql
+code_source_of_truth: github
+published_content_source_of_truth: wordpress
+operations_interface: wp-cli
+```
+
+Vertical sites inherit this repository through WordPress profiles, plugin/theme releases, schemas, and agent contracts. Next.js is not the default platform.

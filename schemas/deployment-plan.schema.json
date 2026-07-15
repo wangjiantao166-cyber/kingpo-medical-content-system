@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingpo.example/schemas/deployment-plan.schema.json",
+  "title": "Deployment Plan",
+  "type": "object",
+  "required": ["deployment_id", "environment", "commit_sha", "components", "backup_required", "approval_required", "rollback_plan"],
+  "properties": {
+    "deployment_id": { "type": "string" },
+    "environment": { "enum": ["staging", "production"] },
+    "commit_sha": { "type": "string" },
+    "components": { "type": "array", "items": { "enum": ["plugin", "theme", "content_import", "redirects", "configuration"] } },
+    "backup_required": { "type": "boolean" },
+    "approval_required": { "type": "boolean" },
+    "dry_run_available": { "type": "boolean" },
+    "rollback_plan": { "type": "string", "minLength": 1 },
+    "operator": { "type": "string" },
+    "scheduled_at": { "type": "string", "format": "date-time" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "environment": { "const": "production" } } },
+      "then": {
+        "properties": {
+          "backup_required": { "const": true },
+          "approval_required": { "const": true }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}

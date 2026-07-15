@@ -17,6 +17,7 @@
         "asset-visual-production",
         "conversion-analytics",
         "data-migration-sync",
+        "wordpress-operations-deployment",
         "release-quality-gate"
       ]
     },

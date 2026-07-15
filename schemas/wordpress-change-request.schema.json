@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingpo.example/schemas/wordpress-change-request.schema.json",
+  "title": "WordPress Change Request",
+  "type": "object",
+  "required": ["change_id", "site_id", "environment", "change_type", "risk_level", "approval_status"],
+  "properties": {
+    "change_id": { "type": "string" },
+    "site_id": { "type": "string" },
+    "environment": { "enum": ["staging", "production"] },
+    "change_type": { "enum": ["plugin", "theme", "content_import", "redirect", "settings", "user_role", "security"] },
+    "risk_level": { "$ref": "common-definitions.schema.json#/$defs/riskLevel" },
+    "approval_status": { "enum": ["draft", "approved", "blocked"] },
+    "requested_by": { "type": "string" },
+    "approved_by": { "type": "string" },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

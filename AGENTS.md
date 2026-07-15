@@ -4,6 +4,23 @@
 
 This repository is the KingPo multi-site content operating system for product master data, source evidence, WordPress publishing, SEO architecture, visual assets, and release quality control.
 
+## Platform Routing
+
+```yaml
+default_implementation_platform: wordpress
+
+wordpress_routes:
+  content_model: wordpress-content-model-admin
+  presentation: wordpress-theme-template
+  operations: wordpress-operations-deployment
+
+disabled_by_default:
+  - nextjs-content-model-admin
+  - nextjs-template-rendering-system
+```
+
+Agents generate and modify code, schemas, reports, drafts, and deployment plans. WordPress is the content operations system. WP-CLI is the primary automation interface. REST API use must be explicitly allowed for a specific operation. Direct SQL writes to production content are prohibited. All production changes pass through `release-quality-gate`; standards and technical claims still require human review.
+
 It is based on the earlier Chinese website rebuild planning repository, but extends it into a maintainable product publishing system for:
 
 - structured product records
