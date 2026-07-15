@@ -101,6 +101,8 @@ Default WordPress action is draft creation or staging implementation. Publishing
 
 A related standard is not proof of full compliance. Standard relationships must be classified as main, supporting, background, not applicable, or human verification required.
 
+If existing materials are incomplete, agents may consult official or authoritative standards sources such as IEC, ISO, EN/CEN/CENELEC/ETSI, UL, UN ECE, SASO, BIS, ANSI/AAMI, ASTM, and IEEE for public standard titles, scope, standard families, and high-level relevance. Agents must not invent versions, clause numbers, test conditions, acceptance criteria, or KingPo compliance conclusions.
+
 ## Customer Perspective Rule
 
 Every product page should help buyers quickly understand:
