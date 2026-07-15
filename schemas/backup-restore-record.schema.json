@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingpo.example/schemas/backup-restore-record.schema.json",
+  "title": "Backup Restore Record",
+  "type": "object",
+  "required": ["backup_id", "site_id", "environment", "backup_type", "storage_reference", "created_at", "verified"],
+  "properties": {
+    "backup_id": { "type": "string" },
+    "site_id": { "type": "string" },
+    "environment": { "enum": ["staging", "production"] },
+    "backup_type": { "enum": ["database", "uploads", "full_site", "plugin_theme"] },
+    "storage_reference": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "verified": { "type": "boolean" },
+    "verified_at": { "type": "string", "format": "date-time" },
+    "restore_tested": { "type": "boolean" },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

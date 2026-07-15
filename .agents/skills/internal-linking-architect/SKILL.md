@@ -1,6 +1,8 @@
----
+﻿---
 name: internal-linking-architect
-description: Build and audit internal links between product categories, products, applications, standards, articles, PDFs, and inquiry pages.
+status: deprecated
+replacement: technical-seo-link-graph
+do_not_use_for_new_work: true
 ---
 
 # Internal Linking Architect
@@ -41,3 +43,6 @@ Avoid vague text such as 点击这里, 查看更多, or 了解详情.
 - Do not expose internal-only drafts through public links.
 - Do not link to R&D reference pages as existing products.
 - Do not overlink irrelevant pages just for SEO.
+
+
+

@@ -1,6 +1,8 @@
----
+﻿---
 name: application-page-system
-description: Create B2B test-scenario and application pages that connect customer intent to products, standards, test objects, and inquiry paths.
+status: deprecated
+replacement: content-strategy-authoring
+do_not_use_for_new_work: true
 ---
 
 # Application Page System
@@ -49,3 +51,6 @@ Link to product categories, product pages, standard pages, technical articles, a
 - Do not fabricate customer cases.
 - Do not copy competitor application text.
 - Do not write unsupported test results.
+
+
+

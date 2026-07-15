@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingpo.example/schemas/skills-manifest.schema.json",
+  "title": "Skills Manifest",
+  "type": "object",
+  "required": ["version", "system", "active_skills"],
+  "properties": {
+    "version": { "const": 2 },
+    "system": { "const": "kingpo-content-os-v2" },
+    "schema": { "type": "string" },
+    "policy": { "type": "string" },
+    "active_skills": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "version",
+          "status",
+          "owner_domain",
+          "risk_level",
+          "accepted_inputs",
+          "produced_outputs",
+          "allowed_mutations",
+          "required_agent_predecessors",
+          "required_artifacts",
+          "required_schemas",
+          "possible_next_steps",
+          "human_approval_required",
+          "replaces"
+        ],
+        "properties": {
+          "name": { "$ref": "common-definitions.schema.json#/$defs/agentName" },
+          "version": { "type": "string" },
+          "status": { "enum": ["active", "deprecated", "blocked"] },
+          "owner_domain": { "type": "string" },
+          "risk_level": { "$ref": "common-definitions.schema.json#/$defs/riskLevel" },
+          "accepted_inputs": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "produced_outputs": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "allowed_mutations": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "required_agent_predecessors": { "type": "array", "items": { "$ref": "common-definitions.schema.json#/$defs/agentName" }, "uniqueItems": true },
+          "required_artifacts": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "required_schemas": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "possible_next_steps": { "type": "array", "items": { "$ref": "common-definitions.schema.json#/$defs/agentName" }, "uniqueItems": true },
+          "human_approval_required": { "type": "string", "minLength": 1 },
+          "replaces": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

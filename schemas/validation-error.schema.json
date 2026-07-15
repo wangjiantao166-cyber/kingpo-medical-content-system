@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingpo.example/schemas/validation-error.schema.json",
+  "title": "Validation Error",
+  "type": "object",
+  "required": ["error_id", "severity", "code", "message"],
+  "properties": {
+    "error_id": { "type": "string" },
+    "severity": { "enum": ["info", "warning", "error", "blocker"] },
+    "code": { "$ref": "common-definitions.schema.json#/$defs/blockerCode" },
+    "message": { "type": "string" },
+    "file": { "type": "string" },
+    "entity_id": { "type": "string" },
+    "owner_agent": { "$ref": "common-definitions.schema.json#/$defs/agentName" }
+  },
+  "additionalProperties": false
+}

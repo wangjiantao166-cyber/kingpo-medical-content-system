@@ -1,0 +1,10 @@
+{
+  "$schema_file": "asset-manifest.schema.json",
+  "asset_id": "AST-BAD-001",
+  "asset_type": "competitor_reference",
+  "title": "Competitor photo",
+  "public_use_status": "approved",
+  "source_id": "SRC-COMP-001",
+  "review_status": "approved",
+  "ai_generated": false
+}

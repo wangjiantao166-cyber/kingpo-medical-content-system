@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingpo.example/schemas/wp-cli-operation.schema.json",
+  "title": "WP CLI Operation",
+  "type": "object",
+  "required": ["operation_id", "command", "environment", "dry_run", "operator", "expected_mutation"],
+  "properties": {
+    "operation_id": { "type": "string" },
+    "command": { "type": "string" },
+    "environment": { "enum": ["local", "staging", "production"] },
+    "dry_run": { "type": "boolean" },
+    "operator": { "type": "string" },
+    "expected_mutation": { "type": "string" },
+    "affected_objects": { "type": "array", "items": { "type": "string" } },
+    "started_at": { "type": "string", "format": "date-time" },
+    "exit_code": { "type": "integer" },
+    "report_path": { "type": "string" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "environment": { "const": "production" } } },
+      "then": { "properties": { "dry_run": { "const": true } } }
+    }
+  ],
+  "additionalProperties": false
+}

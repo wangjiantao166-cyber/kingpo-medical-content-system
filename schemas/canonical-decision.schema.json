@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingpo.example/schemas/canonical-decision.schema.json",
+  "title": "Canonical Decision",
+  "type": "object",
+  "required": ["decision_id", "entity_id", "url", "canonical_type", "indexation_status", "reviewer_role"],
+  "properties": {
+    "decision_id": { "type": "string", "pattern": "^CAN-[A-Z0-9-]+$" },
+    "entity_id": { "type": "string" },
+    "url": { "type": "string" },
+    "canonical_url": { "type": "string" },
+    "canonical_type": { "enum": ["self", "canonical_to_parent", "canonical_to_family", "no_canonical_required", "redirect"] },
+    "indexation_status": { "enum": ["index", "noindex", "blocked"] },
+    "reason": { "type": "string" },
+    "reviewer_role": { "$ref": "common-definitions.schema.json#/$defs/reviewRole" },
+    "reviewed_at": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

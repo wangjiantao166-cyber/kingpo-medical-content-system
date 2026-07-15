@@ -1,0 +1,9 @@
+profile: wordpress-native
+routes:
+  content_model: wordpress-content-model-admin
+  presentation: wordpress-theme-template
+  operations: wordpress-operations-deployment
+  release_gate: release-quality-gate
+disabled_by_default:
+  - nextjs-content-model-admin
+  - nextjs-template-rendering-system

@@ -2,9 +2,9 @@
 
 ## Purpose
 
-This document defines the target system for a self-maintainable KingPo Chinese B2B medical test equipment website.
+This document defines the target system for a self-maintainable KingPo multi-site B2B product content system.
 
-The goal is not only to publish pages, but to create a durable product knowledge system where products, standards, applications, technical articles, PDFs, images, and inquiry forms can be maintained over time.
+The goal is not only to publish pages, but to create a durable product knowledge system where products, standards, applications, resources, PDFs, images, claims, and inquiry routes can be maintained over time.
 
 The site may study the information architecture of strong B2B equipment websites such as LISUN, but it must not copy their text, images, layouts, model naming systems, tables, claims, or customer cases.
 
@@ -29,7 +29,7 @@ Recommended stack:
 - WordPress
 - Lightweight custom theme or maintainable block theme
 - ACF Pro or equivalent structured custom fields
-- Custom Post Types for Products, Standards, Applications, Technical Articles, Assets, and Case/Installation records
+- Custom Post Types for Products, Applications, Standards, Standard Mappings, Resources, and Cases
 - Rank Math or Yoast SEO
 - Fluent Forms, Gravity Forms, or equivalent inquiry form plugin
 - SMTP plugin for mail testing
@@ -37,7 +37,7 @@ Recommended stack:
 - Caching/performance plugin
 - Backup and security plugins
 
-Do not start with NestJS unless there is a confirmed need for a custom application layer. WordPress should first become the content source of truth.
+Do not start with NestJS unless there is a confirmed need for a custom application layer. WordPress should first become the publishing layer, while source records and schemas define the content source of truth.
 
 ## Core Content Types
 
@@ -54,29 +54,75 @@ Required relationships:
 - Related PDFs and images
 - Related Products
 
-### 2. Product Category
+### 2. Product Domain Taxonomy
 
-Represents major catalog entry points. Category pages should not be thin list pages. They should explain test needs, standards, applications, and inquiry routes.
+Represents major catalog entry points as a hierarchical taxonomy, not a standalone CPT. Domain pages should not be thin list pages. They should explain test needs, standards, applications, and inquiry routes.
+
+Initial domain examples:
+
+- Medical Device Test Equipment
+- Battery Safety Test Equipment
+- Environmental & IP Test Equipment
+- Electrical Safety Test Equipment
+- Flammability & Material Test Equipment
+- Plug, Socket, Cable & Gauge Test Equipment
+- Automotive & EV Test Equipment
+- Automation & Custom Test Systems
 
 ### 3. Application
 
-Represents test scenarios and solution pages. Application pages should connect user intent to products, standards, test objects, test items, and inquiry forms.
+Represents test scenarios and solution pages.
+
+Examples:
+
+- BCI closed-loop testing
+- Active implantable medical device verification testing
+- Neural stimulation waveform and load simulation
+- Pacemaker low-frequency electromagnetic immunity testing
+- Transcutaneous energy transfer verification
+- Defibrillation compatibility testing
+- TMS compatibility testing
+
+Application pages should connect user intent to products, standards, test objects, test items, and inquiry forms.
 
 ### 4. Standard
 
-Represents standard-based discovery pages. A related standard is not proof that a product fully complies with that standard.
+Represents standard-based discovery pages.
+
+Standards should be handled cautiously. A related standard is not proof that a product fully complies with that standard.
+
+Each standard page should classify product relationships as:
+
+- Main standard
+- Supporting standard
+- Background standard
+- Not applicable
+- Human verification required
 
 ### 5. Technical Article
 
 Represents long-tail SEO and technical education content.
 
+Articles should explain testing principles, selection questions, standard mapping logic, sample preparation, and inquiry preparation. They must link back to relevant products, applications, standards, and inquiry pages.
+
 ### 6. Asset
 
 Represents images, PDFs, diagrams, catalogs, manuals, certificates, and downloadable files.
 
+Every asset must have:
+
+- Source
+- Public-use permission status
+- Related products or pages
+- Version/date
+- Alt text or description
+- Replacement/deprecation status when needed
+
 ### 7. Case / Installation / Project Record
 
 Use only when authorization exists. If no customer authorization exists, create internal project notes or anonymized scenario examples instead.
+
+Do not invent customers, countries, installations, certificates, or results.
 
 ## Product Status Model
 
@@ -97,21 +143,62 @@ Product status controls page wording, CTA, indexability, and publish approval.
 
 Every public page should be part of a linking graph.
 
-Product Category links to products, applications, standards, technical articles, and inquiry pages.
+Product Category links to:
 
-Product links to category, standards, applications, PDFs, articles, related products, and inquiry pages.
+- Products
+- Applications
+- Standards
+- Technical Articles
+- Inquiry page
 
-Standard links to related products, applications, articles, and evidence notes.
+Product links to:
 
-Application links to recommended products, standards, test objects, test items, and inquiry pages.
+- Category
+- Related standards
+- Applications
+- PDFs
+- Technical articles
+- Related products
+- Inquiry page
 
-Technical Article links to products, applications, standards, PDF resources, and inquiry pages.
+Standard links to:
+
+- Related products
+- Related applications
+- Related articles
+- Source/evidence notes
+
+Application links to:
+
+- Recommended products
+- Related standards
+- Test objects
+- Test items
+- Inquiry page
+
+Technical Article links to:
+
+- Products
+- Applications
+- Standards
+- PDF resources
+- Inquiry page
 
 ## Publishing Principles
 
 Default state for generated content is draft.
 
-A page may be published only after product status, source records, standard relationships, claim risk, approved assets, SEO fields, internal links, and inquiry CTA are complete.
+A page may be published only after:
+
+- Product status is clear
+- Source ownership is classified
+- Key fields have source records
+- Standard relationships are reviewed
+- Medical/regulatory claim risk is reviewed
+- Images and PDFs are approved for public use
+- SEO title, meta description, slug, FAQ, and internal links are complete
+- Inquiry CTA is present
+- Mobile and desktop layout are checked
 
 ## First Implementation Milestone
 
@@ -127,3 +214,11 @@ Create a staging WordPress environment and implement:
 8. Relationship fields
 9. Inquiry CTA field group
 10. SEO field mapping
+
+Then create 5 sample pages:
+
+1. BCI test equipment category/page
+2. Active implantable medical device test equipment category/page
+3. EEG closed-loop dynamic simulation test system page
+4. ISO 14708 related equipment standard page
+5. Medical test equipment technical inquiry page

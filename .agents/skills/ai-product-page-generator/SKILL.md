@@ -1,6 +1,8 @@
----
+﻿---
 name: ai-product-page-generator
-description: Generate professional English B2B product page drafts from source materials using flexible structure, buyer-focused writing, SEO, and strict fact control.
+status: deprecated
+replacement: content-strategy-authoring
+do_not_use_for_new_work: true
 ---
 
 # AI Product Page Generator
@@ -93,3 +95,6 @@ Generate:
 - Do not invent standard versions or clauses.
 - Do not invent certification, customer cases, prices, stock, delivery time, warranty, or regulatory/clinical claims.
 - Do not copy competitor content.
+
+
+

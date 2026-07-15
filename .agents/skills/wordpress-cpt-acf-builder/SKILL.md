@@ -1,6 +1,8 @@
----
+﻿---
 name: wordpress-cpt-acf-builder
-description: Define WordPress custom post types, taxonomies, ACF fields, relationships, and field governance for the KingPo product knowledge system.
+status: deprecated
+replacement: wordpress-content-model-admin
+do_not_use_for_new_work: true
 ---
 
 # WordPress CPT / ACF Builder
@@ -58,3 +60,6 @@ Prefer staging WordPress first. Do not modify production WordPress without expli
 - Do not install or remove production plugins without approval.
 - Do not create production fields without backup and staging validation.
 - Do not make unstructured free-text fields the only source for key product data.
+
+
+

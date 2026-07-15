@@ -1,6 +1,8 @@
----
+﻿---
 name: orphan-link-auditor
-description: Audit orphan pages, weak internal linking, broken links, over-optimized anchors, and crawl path problems across the WordPress site.
+status: deprecated
+replacement: technical-seo-link-graph
+do_not_use_for_new_work: true
 ---
 
 # Orphan Link Auditor
@@ -46,3 +48,6 @@ Work with `internal-linking-architect`, `content-cluster-planner`, `seo-site-arc
 - Do not auto-add links without relevance review.
 - Do not create spammy sitewide links.
 - Do not link to pages that should remain internal or noindex.
+
+
+

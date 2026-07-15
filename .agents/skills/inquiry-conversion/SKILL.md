@@ -1,6 +1,8 @@
----
+﻿---
 name: inquiry-conversion
-description: Design and audit inquiry CTAs and forms for high-quality B2B technical inquiries around medical test equipment.
+status: deprecated
+replacement: conversion-analytics
+do_not_use_for_new_work: true
 ---
 
 # Inquiry Conversion
@@ -53,3 +55,6 @@ Avoid e-commerce wording such as `立即购买` unless there is a confirmed sale
 - Do not promise delivery time, stock, certification, or test result.
 - Do not collect unnecessary sensitive information.
 - Do not make forms so generic that technical staff cannot qualify the inquiry.
+
+
+

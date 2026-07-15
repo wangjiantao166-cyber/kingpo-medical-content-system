@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingpo.example/schemas/agent-handoff.schema.json",
+  "title": "Agent Handoff",
+  "type": "object",
+  "required": ["task_id", "from_agent", "to_agent", "risk_level", "current_state", "requested_next_state", "blockers", "human_approval_required", "timestamp"],
+  "properties": {
+    "task_id": { "type": "string" },
+    "entity_ids": { "type": "array", "items": { "type": "string" } },
+    "from_agent": { "$ref": "common-definitions.schema.json#/$defs/agentName" },
+    "to_agent": { "$ref": "common-definitions.schema.json#/$defs/agentName" },
+    "risk_level": { "$ref": "common-definitions.schema.json#/$defs/riskLevel" },
+    "current_state": { "$ref": "common-definitions.schema.json#/$defs/workflowState" },
+    "requested_next_state": { "$ref": "common-definitions.schema.json#/$defs/workflowState" },
+    "decisions": { "type": "array", "items": { "type": "string" } },
+    "source_ids": { "type": "array", "items": { "type": "string" } },
+    "claim_ids": { "type": "array", "items": { "type": "string" } },
+    "blockers": { "type": "array", "items": { "$ref": "common-definitions.schema.json#/$defs/blockerCode" }, "uniqueItems": true },
+    "open_questions": { "type": "array", "items": { "type": "string" } },
+    "allowed_mutations": { "type": "array", "items": { "type": "string" } },
+    "human_approval_required": { "type": "boolean" },
+    "timestamp": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

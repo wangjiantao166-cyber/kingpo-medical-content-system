@@ -1,6 +1,8 @@
----
+﻿---
 name: data-import-export
-description: Map spreadsheets, CSV files, and structured product records into WordPress-compatible import/export formats with field validation.
+status: deprecated
+replacement: data-migration-sync
+do_not_use_for_new_work: true
 ---
 
 # Data Import / Export
@@ -54,3 +56,6 @@ Map each column to:
 - Do not bulk publish imported products.
 - Do not overwrite confirmed fields with weaker sources.
 - Do not import competitor facts as KingPo data.
+
+
+

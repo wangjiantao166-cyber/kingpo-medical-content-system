@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingpo.example/schemas/standard-record.schema.json",
+  "title": "Standard Record",
+  "type": "object",
+  "required": ["standard_id", "organization", "standard_number", "title", "source_ids", "review_status"],
+  "properties": {
+    "standard_id": { "type": "string", "pattern": "^STD-[A-Z0-9-]+$" },
+    "organization": { "type": "string" },
+    "standard_number": { "type": "string" },
+    "edition": { "type": "string" },
+    "title": { "type": "string" },
+    "scope_summary": { "type": "string" },
+    "source_ids": { "type": "array", "items": { "type": "string" } },
+    "copyright_note": { "type": "string" },
+    "review_status": { "enum": ["unreviewed", "reviewed", "needs_confirmation"] }
+  },
+  "additionalProperties": false
+}

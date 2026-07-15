@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingpo.example/schemas/wordpress-site-record.schema.json",
+  "title": "WordPress Site Record",
+  "type": "object",
+  "required": ["site_id", "site_name", "environment", "public_url", "wp_version", "php_version", "database_type", "connection_method", "credentials_reference"],
+  "properties": {
+    "site_id": { "type": "string" },
+    "site_name": { "type": "string" },
+    "environment": { "enum": ["local", "staging", "production"] },
+    "public_url": { "type": "string" },
+    "admin_url": { "type": "string" },
+    "wp_version": { "type": "string" },
+    "php_version": { "type": "string" },
+    "database_type": { "enum": ["mysql", "mariadb"] },
+    "active_theme": { "type": "string" },
+    "active_plugins": { "type": "array", "items": { "type": "string" } },
+    "seo_provider": { "enum": ["rank_math", "yoast", "kingpo_core", "pending", "none"] },
+    "cache_provider": { "type": "string" },
+    "smtp_provider": { "type": "string" },
+    "connection_method": { "enum": ["local", "ssh_wp_cli", "github_actions", "manual"] },
+    "credentials_reference": { "type": "string", "minLength": 1 },
+    "last_audited_at": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

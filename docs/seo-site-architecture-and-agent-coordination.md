@@ -34,11 +34,20 @@ Therefore, the site should not be a flat product list. It should be a structured
 
 The homepage is the authority hub. It should introduce KingPo as a professional test equipment supplier and route users to the most important content clusters.
 
-Homepage should link to core product categories, major applications, standards center, technical resources, inquiry/contact page, and selected high-value product pages.
+Homepage should link to:
+
+- Core product categories
+- Major applications
+- Standards center
+- Technical resources
+- Inquiry/contact page
+- Selected high-value product pages
 
 The homepage should not become a random link directory.
 
 ### L1: Core Pillar Pages
+
+L1 pages are major category and hub pages.
 
 Recommended L1 structure:
 
@@ -58,21 +67,70 @@ Each L1 page should be a strong pillar page with a clear introduction, subcatego
 
 ### L2: Subcategory, Application, and Standard Pages
 
-L2 pages support more specific search intent, such as Battery Crush Test Equipment, Battery Nail Penetration Test Equipment, Medical Electrical Safety Test Equipment, Active Implantable Medical Device Test Equipment, BCI Test Equipment, Defibrillation Compatibility Test Equipment, IEC 60601 Related Test Equipment, and Battery Safety Testing Applications.
+L2 pages support more specific search intent.
+
+Examples:
+
+- Battery Crush Test Equipment
+- Battery Nail Penetration Test Equipment
+- Medical Electrical Safety Test Equipment
+- Active Implantable Medical Device Test Equipment
+- BCI Test Equipment
+- Defibrillation Compatibility Test Equipment
+- IEC 60601 Related Test Equipment
+- Battery Safety Testing Applications
 
 ### L3: Product Pages and Technical Articles
 
-L3 pages capture model-specific, long-tail, and technical intent, such as product model pages, selection guides, standards FAQ pages, and testing method overviews.
+L3 pages capture model-specific, long-tail, and technical intent.
+
+Examples:
+
+- Specific product model page
+- How to choose a battery crush tester
+- IEC 60601 test equipment FAQ
+- BCI closed-loop test system selection guide
+- Defibrillation compatibility testing method overview
 
 ## Core Internal Linking Model
 
-Homepage links down to L1 pages and selected priority pages.
+### Homepage Links Down
 
-L1 pages link down and across to L2 subcategories, priority products, applications, standards, technical articles, and inquiry pages.
+Homepage links to L1 pages and selected priority pages.
 
-L2 pages link down, up, and across to parent L1 pages, related products, related applications, standards, and technical articles.
+### L1 Pillar Pages Link Down and Across
 
-Product pages link up and across to parent category, standards, applications, related products, PDF resources, and inquiry pages.
+L1 pages link to:
+
+- L2 subcategories
+- Priority products
+- Applications
+- Standards
+- Technical articles
+- Inquiry page
+
+### L2 Pages Link Down, Up, and Across
+
+L2 pages link to:
+
+- Parent L1 page
+- Related product pages
+- Related application pages
+- Related standards
+- Related technical articles
+
+### Product Pages Link Up and Across
+
+Product pages link to:
+
+- Parent category
+- Related standards
+- Related applications
+- Related products
+- PDF/download resources
+- Inquiry page
+
+### Articles Link Back to Pillars
 
 Technical articles should link back to relevant L1/L2 pillar pages and product pages.
 
@@ -85,11 +143,16 @@ Use mixed but natural anchor text:
 - Category phrase: battery safety test equipment
 - Application phrase: lithium battery abuse testing
 
-Avoid repeated exact-match anchors, linking the same target many times in one article, generic anchors like click here, and sitewide footer keyword stuffing.
+Avoid:
+
+- Repeating the same exact anchor text excessively
+- Linking the same target multiple times in one article without reason
+- Generic anchors like click here or learn more
+- Sitewide footer keyword stuffing
 
 ## Agent Coordination Model
 
-No single agent should independently publish a page without other agents checking the related areas.
+The site architecture work must be collaborative. No single agent should independently publish a page without other agents checking the related areas.
 
 ### Required Sequence for New Website Architecture
 
@@ -118,6 +181,16 @@ No single agent should independently publish a page without other agents checkin
 9. `wordpress-draft-publisher`
 10. `product-publish-qa`
 
+### Required Sequence for a New Application Page
+
+1. `application-page-system`
+2. `product-knowledge-base`
+3. `standard-relation-auditor`
+4. `content-cluster-planner`
+5. `google-seo-eeat-content`
+6. `internal-linking-architect`
+7. `product-publish-qa`
+
 ## Deliverables Before WordPress Build
 
 Before building or importing content into WordPress, create:
@@ -136,7 +209,19 @@ Before building or importing content into WordPress, create:
 
 ## Quality Controls
 
-Every proposed page should have page type, search intent, primary keyword, secondary keywords, parent page, child pages, required inbound links, required outbound links, product/source support, index/noindex recommendation, and review status.
+Every proposed page should have:
+
+- Page type
+- Search intent
+- Primary keyword
+- Secondary keywords
+- Parent page
+- Child pages
+- Required inbound links
+- Required outbound links
+- Product/source support
+- Index/noindex recommendation
+- Content owner or review status
 
 ## Avoid These Risks
 

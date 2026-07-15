@@ -1,0 +1,93 @@
+﻿---
+status: profile
+scope: medical-cn
+do_not_route: true
+superseded_by: docs/00-system-scope-and-sites.md
+---
+
+# 同行参考来源使用政策
+
+## 目的
+
+本文件定义 KingPo 脑机接口与有源植入式医疗器械测试设备中文站中同行公开资料的使用边界。同行网站和公开竞品资料只能用于学习、对标、市场理解、用户需求分析和研发参考，不能作为 KingPo 产品事实来源。
+
+当前阶段不连接服务器，不修改任何网站，不改 DNS，不发布页面，不创建 301，不创建网站代码。
+
+## 重点同行参考来源
+
+以下网站和资料仅作为只读同行参考源：
+
+- Fluke Biomedical / 福禄克公开产品资料
+- WhaleTeq / https://www.whaleteq.com/zh-tw 公开产品资料
+- https://www.sinuotek.com/
+- https://www.lisungroup.com/
+- https://www.bndtestequipment.com/
+- https://www.iectestingequipment.com/
+- https://www.haidatestequipment.com/
+- https://www.china-gauges.com/
+
+Fluke Biomedical 和 WhaleTeq 是医疗电气安全与医疗检测设备方向的重要同行参考源，但不是 KingPo 自有资料源，不能作为 KingPo 产品事实来源。
+
+## 第一阶段允许学习的内容
+
+同行参考源只允许用于学习以下方向：
+
+1. 医疗测试设备产品分类
+2. 医疗电气安全测试场景
+3. 有源植入式医疗器械相关测试场景
+4. 神经刺激、心电、电生理和生理信号测试方向
+5. 页面结构
+6. FAQ 方向
+7. 用户需求
+8. 研发参考
+9. 标准号覆盖范围
+10. 应用场景表达
+11. 内链结构
+12. 下载资料模块形式
+13. 询盘 CTA 形式
+
+## 严格禁止的行为
+
+禁止从同行网站或竞品资料：
+
+1. 复制正文内容
+2. 复制图片
+3. 复制参数表作为 KingPo 参数
+4. 复制客户案例
+5. 复制认证声明
+6. 复制品牌表达
+7. 复制 PDF、说明书、图纸、界面截图或设计细节
+8. 直接改写同行页面作为我们的页面
+9. 把同行数据当成 KingPo 产品事实
+10. 将 Fluke、WhaleTeq 或其他同行产品直接表述为 KingPo 已有产品
+11. 使用 “replacement”“equivalent”“替代品”“同款”“完全等同”等未经验证和法务批准的表达
+
+## R&D Reference Rule
+
+如果同行有 KingPo 当前未确认销售的产品、模块或功能，必须标记为：
+
+研发参考 / 需要人工确认
+
+不得发布为 KingPo 可售产品，不得写成现货产品页面。
+
+## 第一轮同行参考范围
+
+第一轮只建议学习公开分类页、公开产品页、公开 brochure/datasheet 摘要信息、公开应用主题、FAQ 和页面模块形式。
+
+不复制原文、图片、表格、PDF 版式、型号体系、软件界面或页面布局。
+
+## 输出要求
+
+允许输出：
+
+- 医疗测试设备分类对照表
+- 标准号覆盖范围对照
+- 页面模块结构对照
+- FAQ 主题列表
+- 关键词方向列表
+- 用户需求和应用场景总结
+- 研发参考方向
+- Source Record 中的同行参考备注
+
+输出时不得包含可直接复制的同行正文段落、图片、参数表、客户案例或认证声明。
+

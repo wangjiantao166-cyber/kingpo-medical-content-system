@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingpo.example/schemas/application-record.schema.json",
+  "title": "Application Record",
+  "type": "object",
+  "required": ["application_id", "title", "target_reader", "search_intent", "source_ids", "review_status"],
+  "properties": {
+    "application_id": { "type": "string", "pattern": "^APP-[A-Z0-9-]+$" },
+    "title": { "type": "string" },
+    "target_reader": { "type": "string" },
+    "search_intent": { "type": "string" },
+    "test_object": { "type": "array", "items": { "type": "string" } },
+    "test_method": { "type": "array", "items": { "type": "string" } },
+    "related_product_ids": { "type": "array", "items": { "type": "string" } },
+    "related_standard_ids": { "type": "array", "items": { "type": "string" } },
+    "source_ids": { "type": "array", "items": { "type": "string" } },
+    "review_status": { "enum": ["unreviewed", "approved", "blocked", "needs_confirmation"] }
+  },
+  "additionalProperties": false
+}

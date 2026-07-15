@@ -1,0 +1,20 @@
+{
+  "$schema_file": "release-gate.schema.json",
+  "release_id": "REL-DEMO-001",
+  "entity_ids": ["PRD-DEMO-001"],
+  "checks": {
+    "sources_complete": true,
+    "high_risk_claims_reviewed": true,
+    "standard_mappings_reviewed": true,
+    "assets_public_approved": true,
+    "canonical_resolved": true,
+    "duplicate_slug_checked": true,
+    "no_competitor_asset_public": true,
+    "no_fake_price_rating_availability": true
+  },
+  "blockers": [],
+  "decision": "approved_for_publish",
+  "reviewer": "KingPo publisher",
+  "reviewer_role": "publisher",
+  "approval_timestamp": "2026-07-15T08:00:00Z"
+}

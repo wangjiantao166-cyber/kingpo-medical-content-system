@@ -1,6 +1,8 @@
----
+﻿---
 name: content-refresh-auditor
-description: Audit published or draft content for stale parameters, outdated PDFs, broken links, old standards, weak internal links, and review gaps.
+status: deprecated
+replacement: technical-seo-link-graph
+do_not_use_for_new_work: true
 ---
 
 # Content Refresh Auditor
@@ -48,3 +50,6 @@ Use this skill for monthly, quarterly, or pre-launch audits.
 - Do not silently delete old content.
 - Do not update technical facts without source evidence.
 - Do not change URL structures without a URL plan.
+
+
+
