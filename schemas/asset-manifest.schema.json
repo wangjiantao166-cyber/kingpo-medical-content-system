@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingpo.example/schemas/asset-manifest.schema.json",
+  "title": "Asset Manifest",
+  "type": "object",
+  "required": ["asset_id", "asset_type", "title", "public_use_status", "source_id", "review_status"],
+  "properties": {
+    "asset_id": { "type": "string", "pattern": "^AST-[A-Z0-9-]+$" },
+    "asset_type": { "enum": ["real_product_photo", "real_test_photo", "technical_diagram", "workflow_diagram", "render", "AI_concept_image", "customer_asset", "competitor_reference", "certificate", "manual", "catalog", "test_report"] },
+    "title": { "type": "string" },
+    "file_path_or_url": { "type": "string" },
+    "source_id": { "type": "string" },
+    "related_entity_ids": { "type": "array", "items": { "type": "string" } },
+    "public_use_status": { "enum": ["approved", "restricted", "internal_only", "blocked", "unknown"] },
+    "alt_text": { "type": "string" },
+    "caption": { "type": "string" },
+    "reviewer": { "type": "string" },
+    "review_status": { "enum": ["unreviewed", "approved", "blocked", "needs_permission"] },
+    "ai_generated": { "type": "boolean" }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingpo.example/schemas/claim-record.schema.json",
+  "title": "Claim Record",
+  "type": "object",
+  "required": ["claim_id", "entity_id", "claim_text", "claim_type", "risk_level", "source_ids", "status"],
+  "properties": {
+    "claim_id": { "type": "string", "pattern": "^CLM-[A-Z0-9-]+$" },
+    "entity_id": { "type": "string" },
+    "field_or_section": { "type": "string" },
+    "claim_text": { "type": "string" },
+    "claim_type": { "enum": ["technical", "standard", "certification", "calibration", "medical", "customer", "delivery", "price", "warranty", "capability", "marketing"] },
+    "risk_level": { "enum": ["LOW", "MEDIUM", "HIGH", "REGULATORY_HIGH"] },
+    "source_ids": { "type": "array", "items": { "type": "string" } },
+    "evidence_level": { "enum": ["none", "weak", "owned_source", "engineering_confirmed", "official_confirmed"] },
+    "allowed_surfaces": { "type": "array", "items": { "enum": ["internal", "draft", "public_page", "pdf", "schema", "sales_email"] } },
+    "approved_wording": { "type": "string" },
+    "prohibited_wording": { "type": "array", "items": { "type": "string" } },
+    "reviewer": { "type": "string" },
+    "approval_date": { "type": "string", "format": "date" },
+    "review_due_date": { "type": "string", "format": "date" },
+    "status": { "enum": ["draft", "approved", "blocked", "expired", "needs_confirmation"] }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "risk_level": { "enum": ["HIGH", "REGULATORY_HIGH"] } } },
+      "then": { "required": ["reviewer", "approved_wording"] }
+    }
+  ],
+  "additionalProperties": false
+}

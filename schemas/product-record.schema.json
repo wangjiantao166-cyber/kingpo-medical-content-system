@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingpo.example/schemas/product-record.schema.json",
+  "title": "Product Record",
+  "type": "object",
+  "required": ["product_id", "record_type", "english_name", "lifecycle_status", "primary_product_domain", "site_targets", "source_ids", "human_review_status"],
+  "properties": {
+    "product_id": { "type": "string", "pattern": "^PRD-[A-Z0-9-]+$" },
+    "chinese_name": { "type": "string" },
+    "english_name": { "type": "string", "minLength": 1 },
+    "model": { "type": "string" },
+    "product_family": { "type": "string" },
+    "parent_product_id": { "type": "string" },
+    "record_type": { "enum": ["family", "model", "test_system", "accessory", "fixture"] },
+    "lifecycle_status": { "enum": ["active", "custom", "rd", "legacy", "discontinued", "internal"] },
+    "primary_product_domain": { "type": "string" },
+    "secondary_taxonomies": {
+      "type": "object",
+      "properties": {
+        "application_industry": { "type": "array", "items": { "type": "string" } },
+        "test_object": { "type": "array", "items": { "type": "string" } },
+        "test_method": { "type": "array", "items": { "type": "string" } },
+        "standard_organization": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "site_targets": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "specification_ids": { "type": "array", "items": { "type": "string" } },
+    "standard_mapping_ids": { "type": "array", "items": { "type": "string" } },
+    "asset_ids": { "type": "array", "items": { "type": "string" } },
+    "source_ids": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "public_visibility": { "enum": ["public_allowed", "draft_only", "internal_only", "not_public"] },
+    "human_review_status": { "enum": ["unreviewed", "technical_review", "standards_review", "approved", "blocked"] }
+  },
+  "additionalProperties": false
+}

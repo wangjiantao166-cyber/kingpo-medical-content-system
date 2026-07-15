@@ -2,13 +2,14 @@
 
 ## Repository Purpose
 
-This repository is now the KingPo medical test equipment WordPress content system blueprint.
+This repository is the KingPo multi-site content operating system for product master data, source evidence, WordPress publishing, SEO architecture, visual assets, and release quality control.
 
 It is based on the earlier Chinese website rebuild planning repository, but extends it into a maintainable product publishing system for:
 
 - structured product records
 - WordPress custom post types and ACF fields
-- product lifecycle status
+- product lifecycle status and site targeting
+- field-level source and claim evidence
 - application and test-scenario pages
 - standard relationship review
 - internal linking architecture
@@ -18,7 +19,7 @@ It is based on the earlier Chinese website rebuild planning repository, but exte
 - ongoing content refresh
 - import/export workflows
 
-The target is a KingPo-specific B2B product knowledge website with strong catalog depth and internal linking, inspired by mature equipment-industry information architecture patterns, while keeping all KingPo content original, source-based, and medically cautious.
+The target is a KingPo-specific B2B product knowledge system with strong catalog depth and internal linking, inspired by mature equipment-industry information architecture patterns, while keeping all KingPo content original, source-based, and cautious with technical, standards, medical, and regulatory claims.
 
 ## Existing Company Source Context
 
@@ -27,44 +28,40 @@ KingPo should not be described as only a medical device testing company. Existin
 - https://www.dgkingpo.com/ as the KingPo / DGKingPo main site and broad test equipment source
 - https://www.batterytestingmachine.com/ as a KingPo English product site covering battery testing equipment, environmental test chambers, safety compliance testing equipment, and related medical test equipment categories
 - https://www.kingpocn.com/ as a KingPo domestic Chinese site and Chinese-market source. It may support Chinese product facts, category understanding, images, and company capability references, but English/export content should be rewritten for overseas B2B buyers instead of directly machine-translated.
+- https://www.kingpo.hk/ as a KingPo-related site that must be recorded in the source registry when page-level content is reviewed. If unavailable or unstable, do not infer facts from it.
 
-The new medical-focused content system should use these sites as primary KingPo-owned source references where relevant, while still recording exact page-level sources and human verification status.
+The content system should use these sites as KingPo-owned or KingPo-related source references where relevant, while still recording exact page-level sources and human verification status.
 
 ## Project
 
-This repository is for building the KingPo Chinese B2B medical test equipment website focused on BCI and active implantable medical device test equipment.
+This repository is for building a KingPo product and content operating system that can serve multiple WordPress publishing targets and languages.
 
 Project positioning:
 
-脑机接口与有源植入式医疗器械测试设备中文站
+KingPo 多站共用产品主数据与外贸内容系统
 
-BCI and Active Implantable Medical Device Test Equipment Website
+KingPo Multi-Site Product Data and B2B Content Operating System
 
-The goal is to create a professional Chinese website for product display, product inquiries, technical content, standards-based pages, R&D validation scenarios, registration testing support, third-party laboratory use cases, and SEO growth in medical testing equipment.
+The goal is to create a professional source-based system for product display, product inquiries, technical content, standards-based pages, application scenarios, laboratory use cases, and SEO growth across KingPo product domains.
 
-This is a new independent Chinese website project. Do not migrate, replace, redirect, or modify any existing website unless the user gives explicit approval.
+WordPress is the first-stage publishing layer. Do not migrate, replace, redirect, publish to, or modify any existing production website unless the user gives explicit approval.
 
 ## First-Phase Scope
 
-The first phase focuses only on medical test equipment related to BCI, active implantable medical devices, medical electrical safety, and medical test instruments.
+The first phase focuses on system architecture, data contracts, evidence rules, WordPress implementation specifications, SEO architecture, and agent coordination before mass content production.
 
-Core directions include:
+Priority product domains may include:
 
-- 脑机接口测试设备
-- 有源植入式医疗器械测试设备
-- 神经刺激器测试设备
-- 植入式起搏器 / ICD 测试设备
-- EEG / EMG / EOG / LFP / Spike / ECoG 信号模拟
-- 闭环神经刺激测试
-- 经皮能量传递测试
-- 除颤兼容测试
-- EMC / 磁场 / TMS / 超声兼容测试
-- 电极、电导线、绝缘、耐压、组织接口测试
-- GB 16174 / YY 0989 / YY/T 1996 / ISO 14708 相关测试设备
+- Medical Device Test Equipment
+- Battery Safety Test Equipment
+- Environmental & IP Test Equipment
+- Electrical Safety Test Equipment
+- Flammability & Material Test Equipment
+- Plug, Socket, Cable & Gauge Test Equipment
+- Automotive & EV Test Equipment
+- Automation & Custom Test Systems
 
-The first phase does not focus on IP waterproof testing, flammability testing, battery testing, household appliance safety testing, general gauges, or general industrial testing equipment. These old directions are removed from the first-phase main line and may only be revisited later with explicit approval.
-
-Medical gauges, ISO 80369, ISO 18250, and luer connector test equipment are not first-phase main-line topics. They may be handled later as a separate “医疗连接件与医疗量规专题”.
+Medical products remain an important vertical. BCI, active implantable medical device test equipment, medical electrical safety, medical gauges, ISO 80369, ISO 18250, and luer connector test equipment should be handled when supported by source evidence and business priority, but they do not define the entire repository.
 
 ## Critical Rules
 
@@ -132,9 +129,11 @@ If a competitor has a product that KingPo does not currently sell, mark it as �
 
 Do not claim equivalence such as “same as Fluke”, “Fluke replacement”, “Fluke equivalent”, “better than Fluke”, “WhaleTeq 替代品”, “同款 WhaleTeq”, “完全等同 WhaleTeq”, “WhaleTeq replacement”, or “WhaleTeq equivalent” unless verified test data and legal approval exist.
 
-## Website Positioning
+## Legacy Medical Vertical Notes
 
-The website should serve Chinese-speaking B2B medical test equipment customers, including:
+The following medical Chinese-site notes are retained as a legacy vertical reference. Use them only when the task is specifically about a Chinese medical testing equipment section or prototype. They must not override the v2 system scope in `docs/00-system-scope-and-sites.md`.
+
+For that vertical, the website may serve Chinese-speaking B2B medical test equipment customers, including:
 
 - 脑机接口研发团队
 - 有源植入式医疗器械厂家
@@ -148,9 +147,9 @@ The website should serve Chinese-speaking B2B medical test equipment customers, 
 
 The content should be professional, source-based, cautious with medical and regulatory claims, and suitable for Chinese procurement, R&D, registration testing, and laboratory users.
 
-## Product Page Structure
+## Legacy Medical Product Page Structure
 
-Every Chinese product page should follow this order:
+When producing a Chinese medical product page, this older structure may be used as a starting point, but it should be adapted to the product, source completeness, buyer intent, and the flexible page-brief rules in `docs/content-types-and-acf-field-map.md`:
 
 1. H1
 2. 一句话产品定位
@@ -172,9 +171,9 @@ The “核心信息” section must appear before “产品概述”.
 
 Do not write thin, generic, or keyword-stuffed content.
 
-## SEO Rules
+## Legacy Medical SEO Notes
 
-Chinese SEO should focus on BCI test equipment, active implantable medical device test equipment, medical electrical safety, neural stimulation testing, implantable medical device testing, relevant GB / YY / ISO standards, signal simulation, compatibility testing, and procurement or R&D validation intent.
+When working specifically on the medical Chinese vertical, SEO may focus on BCI test equipment, active implantable medical device test equipment, medical electrical safety, neural stimulation testing, implantable medical device testing, relevant GB / YY / ISO standards, signal simulation, compatibility testing, and procurement or R&D validation intent.
 
 Priority SEO directions include:
 
@@ -195,9 +194,9 @@ Priority SEO directions include:
 
 For every important page, prepare H1, SEO Title, Meta Description, URL Slug, core keywords, related keywords, image filename suggestions, image alt text, internal link suggestions, FAQ, and Schema suggestions.
 
-## First Batch Sample Pages
+## Legacy Medical Sample Pages
 
-First-phase sample pages should follow this priority:
+These earlier sample pages are retained as possible medical fixtures or future examples, not as the mandatory first-phase roadmap for the whole repository:
 
 1. 脑机接口测试设备
 2. 有源植入式医疗器械测试设备

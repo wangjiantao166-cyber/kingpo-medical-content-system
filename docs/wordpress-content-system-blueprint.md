@@ -2,9 +2,9 @@
 
 ## Purpose
 
-This document defines the target system for a self-maintainable KingPo Chinese B2B medical test equipment website.
+This document defines the target system for a self-maintainable KingPo multi-site B2B product content system.
 
-The goal is not only to publish pages, but to create a durable product knowledge system where products, standards, applications, technical articles, PDFs, images, and inquiry forms can be maintained over time.
+The goal is not only to publish pages, but to create a durable product knowledge system where products, standards, applications, resources, PDFs, images, claims, and inquiry routes can be maintained over time.
 
 The site may study the information architecture of strong B2B equipment websites such as LISUN, but it must not copy their text, images, layouts, model naming systems, tables, claims, or customer cases.
 
@@ -29,7 +29,7 @@ Recommended stack:
 - WordPress
 - Lightweight custom theme or maintainable block theme
 - ACF Pro or equivalent structured custom fields
-- Custom Post Types for Products, Standards, Applications, Technical Articles, Assets, and Case/Installation records
+- Custom Post Types for Products, Applications, Standards, Standard Mappings, Resources, and Cases
 - Rank Math or Yoast SEO
 - Fluent Forms, Gravity Forms, or equivalent inquiry form plugin
 - SMTP plugin for mail testing
@@ -37,7 +37,7 @@ Recommended stack:
 - Caching/performance plugin
 - Backup and security plugins
 
-Do not start with NestJS unless there is a confirmed need for a custom application layer. WordPress should first become the content source of truth.
+Do not start with NestJS unless there is a confirmed need for a custom application layer. WordPress should first become the publishing layer, while source records and schemas define the content source of truth.
 
 ## Core Content Types
 
@@ -54,22 +54,20 @@ Required relationships:
 - Related PDFs and images
 - Related Products
 
-### 2. Product Category
+### 2. Product Domain Taxonomy
 
-Represents major catalog entry points. Category pages should not be thin list pages. They should explain test needs, standards, applications, and inquiry routes.
+Represents major catalog entry points as a hierarchical taxonomy, not a standalone CPT. Domain pages should not be thin list pages. They should explain test needs, standards, applications, and inquiry routes.
 
-First-phase category examples:
+Initial domain examples:
 
-- BCI test equipment
-- Active implantable medical device test equipment
-- Neural stimulation test equipment
-- Pacemaker / ICD test equipment
-- Electrophysiological signal simulation and closed-loop testing
-- Transcutaneous energy transfer test equipment
-- Defibrillation compatibility test equipment
-- Magnetic field / TMS / ultrasound / EMC compatibility test equipment
-- Electrode, lead, insulation, withstand voltage, and tissue-interface test equipment
-- Medical electrical safety test equipment
+- Medical Device Test Equipment
+- Battery Safety Test Equipment
+- Environmental & IP Test Equipment
+- Electrical Safety Test Equipment
+- Flammability & Material Test Equipment
+- Plug, Socket, Cable & Gauge Test Equipment
+- Automotive & EV Test Equipment
+- Automation & Custom Test Systems
 
 ### 3. Application
 

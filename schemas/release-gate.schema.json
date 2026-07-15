@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kingpo.example/schemas/release-gate.schema.json",
+  "title": "Release Gate",
+  "type": "object",
+  "required": ["release_id", "entity_ids", "checks", "blockers", "decision", "reviewer"],
+  "properties": {
+    "release_id": { "type": "string", "pattern": "^REL-[A-Z0-9-]+$" },
+    "entity_ids": { "type": "array", "items": { "type": "string" } },
+    "checks": {
+      "type": "object",
+      "properties": {
+        "sources_complete": { "type": "boolean" },
+        "high_risk_claims_reviewed": { "type": "boolean" },
+        "standard_mappings_reviewed": { "type": "boolean" },
+        "assets_public_approved": { "type": "boolean" },
+        "canonical_resolved": { "type": "boolean" },
+        "duplicate_slug_checked": { "type": "boolean" },
+        "no_competitor_asset_public": { "type": "boolean" },
+        "no_fake_price_rating_availability": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "blockers": { "type": "array", "items": { "type": "string" } },
+    "decision": { "enum": ["approved_for_staging", "approved_for_publish", "blocked"] },
+    "reviewer": { "type": "string" },
+    "notes": { "type": "string" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "blockers": { "minItems": 1 } } },
+      "then": { "properties": { "decision": { "const": "blocked" } } }
+    }
+  ],
+  "additionalProperties": false
+}
